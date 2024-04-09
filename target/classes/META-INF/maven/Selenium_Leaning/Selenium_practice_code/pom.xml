@@ -64,5 +64,10 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>Rahul_Shetty_Practice_Projects</groupId>
+			<artifactId>Assignment</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

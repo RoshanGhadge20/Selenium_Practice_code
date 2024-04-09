@@ -1,7 +1,6 @@
 package Working_with_ChromeDevTools_Protocols;
 
 import java.util.Optional;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
