@@ -29,6 +29,7 @@ public class Working_wth_Excels {
 		System.out.println("Total Number of columns into the sheet are :- " + colcount);
 
 		// Retriving the data from excel and store it into the arraylist
+		
 		DataFormatter formatter = new DataFormatter();
 		Object data[][] = new Object[rowcount][colcount];
 		for (int i = 0; i < rowcount; i++) {
@@ -37,9 +38,10 @@ public class Working_wth_Excels {
 				XSSFCell cell = row.getCell(j);
 				// System.out.println(cell);
 				data[i][j] = formatter.formatCellValue(cell);
-				System.out.println(data[i][j]); 
+				System.out.print(" "+data[i][j]); 
 
 			}
+			System.out.println("");
 		}
 
 		System.out.println("End of Program Executions");
