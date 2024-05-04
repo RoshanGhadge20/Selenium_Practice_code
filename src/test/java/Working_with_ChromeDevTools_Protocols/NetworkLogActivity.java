@@ -5,9 +5,13 @@ import java.util.Optional;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v93.network.Network;
-import org.openqa.selenium.devtools.v93.network.model.Request;
-import org.openqa.selenium.devtools.v93.network.model.Response;
+import org.openqa.selenium.devtools.v122.fetch.model.AuthChallengeResponse.Response;
+import org.openqa.selenium.devtools.v122.network.Network;
+import org.openqa.selenium.devtools.v122.network.model.Request;
+import org.openqa.selenium.devtools.v122.network.Network;
+import org.openqa.selenium.devtools.v122.network.model.AuthChallengeResponse.Response;
+import org.openqa.selenium.devtools.v122.network.model.Request;
+
 
 
 public class NetworkLogActivity {

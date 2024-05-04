@@ -4,7 +4,7 @@ import java.util.Optional;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v93.emulation.Emulation;
+import org.openqa.selenium.devtools.v122.emulation.Emulation;
 
 public class MobileEmulatorTest {
 
@@ -20,7 +20,7 @@ public class MobileEmulatorTest {
 		devTools.createSession();
 		
 		//send command to CDP Methods-> CDP Methods will invoke and get access to chrome dev tools
-		devTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
+		devTools.send(Emulation.setDeviceMetricsOverride(600, 1000, 50, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), java.util.Optional.empty()));
 		
 		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
 		
