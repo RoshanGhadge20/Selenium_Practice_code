@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -78,7 +79,7 @@ public class working_with_AB_testing {
 		// Working with the disappearing elements
 		driver.findElement(By.xpath("//*[@id='content']/ul/li[9]/a")).click();
 		driver.findElement(By.linkText("Home")).click();
-		//driver.navigate().back();
+		// driver.navigate().back();
 		Thread.sleep(2000);
 
 		// Working with Drag and Drop
@@ -87,14 +88,49 @@ public class working_with_AB_testing {
 		WebElement droppableElement = driver.findElement(By.cssSelector("div[draggable='true']"));
 		action.dragAndDrop(draggablElement, droppableElement).build().perform();
 		driver.navigate().back();
-		
-		
-		//Working with 
-		
-		
-	
 
-		driver.close();
+		// Working with Dropdown
+		driver.findElement(By.xpath("//a[contains(text(),'Dropdown')]")).click();
+		WebElement drpdwnElement = driver.findElement(By.cssSelector("select[id='dropdown']"));
+		Select select = new Select(drpdwnElement);
+		select.selectByVisibleText("Option 1");
+		driver.navigate().back();
+
+		// working with Dynamic content
+
+		// Working with Dynamic controls
+		driver.findElement(By.linkText("Dynamic Controls")).click();
+		driver.findElement(By.xpath("//input[@label='blah']")).click();
+		driver.findElement(By.xpath("//button[text()='Remove']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[text()='Add']")).click();
+		driver.navigate().back();
+
+		// Working with Dynamic Loading
+
+		// Working with Entry Ads
+		driver.findElement(By.linkText("Entry Ads")).click();
+		driver.findElement(By.cssSelector("a[id='restart-ad']")).click();
+		driver.findElement(By.xpath("//*[@id='modal']/div[2]/div[3]/p")).click();
+		driver.navigate().back();
+
+		// Working with Exit Intent
+
+		// Working with File Download
+		driver.findElement(By.linkText("File Download")).click();
+		driver.findElement(By.partialLinkText("20DCE143")).click();
+		System.out.println("File gets downloaded");
+		driver.navigate().back();
+
+		// Working with File Upload
+		/*
+		 * driver.findElement(By.tagName("File Upload")).click();
+		 * System.out.println((driver.getTitle()));
+		 * driver.findElement(By.cssSelector("*[id='file-upload']")).click();
+		 * 
+		 */
+
+		driver.quit();
 		System.out.println("End of Program Executions");
 	}
 
