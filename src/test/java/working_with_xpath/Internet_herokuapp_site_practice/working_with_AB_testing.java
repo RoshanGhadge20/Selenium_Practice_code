@@ -23,15 +23,18 @@ public class working_with_AB_testing {
 		driver.findElement(By.linkText("A/B Testing")).click();
 
 		// Working with A/B Testing
+		System.out.println("1");
 		System.out.println("Getting an page title for A/B Testing: " + driver.getTitle());
 		String textElement = driver
 				.findElement(By.xpath("//p[contains(text(),'Also known as split testing. This is a way in whic')]"))
 				.getText();
 		System.out.println(textElement);
 		driver.navigate().back();
+		
+
 
 		// Working with Add/Remove Elements
-
+		System.out.println("2");
 		driver.findElement(By.linkText("Add/Remove Elements")).click();
 		for (int i = 1; i <= 10; i++) {
 			driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
@@ -39,6 +42,7 @@ public class working_with_AB_testing {
 		driver.navigate().back();
 
 		// Working with Basic Auth
+		System.out.println("3");
 		driver.findElement(By.linkText("Basic Auth")).click();
 		driver.navigate().to("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 		driver.navigate().to("https://the-internet.herokuapp.com/");
@@ -129,8 +133,25 @@ public class working_with_AB_testing {
 		 * driver.findElement(By.cssSelector("*[id='file-upload']")).click();
 		 * 
 		 */
+		
+		//Working with Floating Menu
+		
+		// Working with Forgot Password
+		driver.findElement(By.linkText("Forgot Password")).click();
+		driver.findElement(By.cssSelector("*[name='email']")).sendKeys("roshanghadge202222@gmail.com");
+		driver.findElement(By.cssSelector("*[type='submit']")).click();
+		driver.navigate().back();
+		driver.navigate().back();
+		
+		//Working with Form Authentication
+		
+		//Working with Frames
+		driver.findElement(By.linkText("Frames")).click();
+		
 
-		driver.quit();
+		
+		
+		driver.close();
 		System.out.println("End of Program Executions");
 	}
 
