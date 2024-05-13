@@ -100,10 +100,29 @@ public class working_with_Frames {
 		// Working with Notification message
 
 		// Working with Redirect Link
-		driver.findElement(By.linkText("Redirect Link")).click();
-		WebElement linkedElement = driver.findElement(By.cssSelector("*[id='redirect']"));
-		action.keyDown(Keys.CONTROL).click(linkedElement).keyUp(Keys.CONTROL).build().perform();
-		System.out.println("Getting clicked into the new tab");
+		/*
+		 * driver.findElement(By.linkText("Redirect Link")).click(); WebElement
+		 * linkedElement = driver.findElement(By.cssSelector("*[id='redirect']"));
+		 * action.keyDown(Keys.CONTROL).click(linkedElement).keyUp(Keys.CONTROL).build()
+		 * .perform(); System.out.println("Getting clicked into the new tab");
+		 */
+
+		// Working with Secure File Download
+
+		// Working with Secure File Shadow DOM
+
+		// Working with Secure File Shifting Content
+		System.out.println("Working with shifting of content/image by pixels");
+		
+		//Working with Slow Resources 
+		
+		//Working with data tables 
+		
+		//Working with status codes
+		
+		//work with typos
+		
+		//WYSIWYG Editor
 
 		driver.quit();
 		System.out.println("End of program code execution");
