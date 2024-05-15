@@ -1,0 +1,44 @@
+Here is the sample code of command one to send texts using JavascriptExecutor.
+
+JavascriptExecutor js = (JavascriptExecutor)driver;
+
+js.executeScript(“document.getElementsById(‘some_id’).value=’Avinash Mishra’;”);
+
+package SeleniumTester;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class JavaScriptRandomDemo {
+  @Test
+  public void javaScriptRandomDemo()throws InterruptedException {
+	  
+	  System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
+	  
+	  WebDriver driver = new ChromeDriver();
+	 
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  
+	  driver.get("https://www.inviul.com");
+	  
+	  driver.manage().window().maximize();
+	  Thread.sleep(3000);
+	  
+	  //Javascript command
+	  JavascriptExecutor js = (JavascriptExecutor)driver;
+	  js.executeScript("document.getElementById('s').value='Avinash Mishra';");
+	  	  
+	  Thread.sleep(5000);
+	  
+	  driver.close();
+	  
+	  driver.quit();
+
+
+  }
+}
+https://stackoverflow.com/questions/42358965/how-to-handle-authentication-alert-of-browser-in-selenium-webdriver
