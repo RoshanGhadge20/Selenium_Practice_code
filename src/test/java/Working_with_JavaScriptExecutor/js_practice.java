@@ -1,6 +1,7 @@
 package Working_with_JavaScriptExecutor;
 
 import java.awt.Window;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.text.Document;
 
@@ -10,15 +11,19 @@ import org.openqa.selenium.JavascriptExecutor.*;
 import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class js_practice {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("headless");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
+		long startTime=System.currentTimeMillis();
 		
 		//Working with Javascript Executor 
 		
@@ -48,8 +53,11 @@ public class js_practice {
 		driver.navigate().to("https://www.browserstack.com/guide/javascriptexecutor-in-selenium");
 		js.executeAsyncScript("window.scrollBy(0,document.body.scrollHeight)");
 		
-		
-		
+			
+		long endTime=System.currentTimeMillis();	
+		long toatalTime=endTime-startTime;
+		long min=TimeUnit.MILLISECONDS.toMinutes(toatalTime);
+		System.out.println("Total Time required for Test execution in mins:- "+ min);
 		driver.quit();
 		System.out.println("End of program execution");
 		
