@@ -10,12 +10,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.JavascriptExecutor.*;
 import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.bytebuddy.asm.Advice.Argument;
 
-public class js_practice {
+public class operations_perfomed_with_js {
+	private static Object[] argument;
+
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options=new ChromeOptions();
@@ -52,6 +56,15 @@ public class js_practice {
 		//JavaScript executor to scrolldown the asynscript
 		driver.navigate().to("https://www.browserstack.com/guide/javascriptexecutor-in-selenium");
 		js.executeAsyncScript("window.scrollBy(0,document.body.scrollHeight)");
+		
+		//JavaScript executor to scrollig by using pixel
+		js.executeScript("window.scrollBy(0,100)");
+		
+		/*
+		 * //scrolling page till element found WebElement
+		 * flagElement=driver.findElement(By.xpath(""));
+		 * js.executeScript(argument[0].ScrollIntoview(),"flag");
+		 */
 		
 			
 		long endTime=System.currentTimeMillis();	
