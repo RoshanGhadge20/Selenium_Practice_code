@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.hc.client5.http.cookie.Cookie;
+/*import org.openqa.selenium.Cookie*/
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class demo_cookies {
@@ -21,8 +21,10 @@ public class demo_cookies {
 		System.out.println("Total Number of cookies are:- " + count);
 
 		
+		
 		/*
-		 * Cookie cookie = new Cookie("RG", 2011); driver.manage().addCookie(cookie);
+		 * // Cookie cookie = new Cookie("RG", 2011); driver.manage().addCookie(new
+		 * Cookie("RG", "2011"));
 		 */
 		
 		//getting list of cookies file name
