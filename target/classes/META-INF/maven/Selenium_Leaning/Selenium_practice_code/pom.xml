@@ -28,17 +28,24 @@
 			<version>1.5.0</version>  Use the latest version 
 		</dependency> */
 -->
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.18.1</version>
 		</dependency>
-		
+
 		<dependency>
-    <groupId>io.github.qsy7.java.modules.browser.modules</groupId>
-    <artifactId>ashot</artifactId>
-    <version>0.3.3</version>
-</dependency>
+			<groupId>io.github.qsy7.java.modules.browser.modules</groupId>
+			<artifactId>ashot</artifactId>
+			<version>0.3.3</version>
+		</dependency>
 
 
 		<dependency>
