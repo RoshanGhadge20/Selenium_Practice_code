@@ -10,7 +10,7 @@
 
 	<name>Selenium_practice_code</name>
 	<url>http://maven.apache.org</url>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -22,17 +22,25 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!--/*  <dependency>
+		<!--
+		<dependency>
 			<groupId>io.webfolder</groupId>
 			<artifactId>cdp4j</artifactId>
-			<version>1.5.0</version>  Use the latest version 
-		</dependency> */
--->
+			<version>1.5.0</version>
+		</dependency>
+		-->
 
+		<!-- Removed jcabi-log dependency -->
+		
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.17.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.17.0</version>
 		</dependency>
 
 		<dependency>
@@ -47,7 +55,6 @@
 			<version>0.3.3</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -59,7 +66,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.33</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>io.github.qsy7.java.modules.browser.drivers</groupId>
@@ -76,13 +82,11 @@
 			<artifactId>poi</artifactId>
 			<version>5.2.5</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>Rahul_Shetty_Practice_Projects</groupId>
