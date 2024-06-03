@@ -20,6 +20,8 @@ public class work_with_dynamicxpath {
 		 * 
 		 * 2. Contains method
 		 * driver.findElement(By.xpath("//tagname[contains(@id,'value')]"));
+		 * driver.findElement(By.xpath("//tagname[contains(text(),'--text needs to be 
+		 * search')]");
 		 * 
 		 * 3. Relative Xpath
 		 * driver.findElement(By.xpath("//tagname[@attribute='value']"));
@@ -32,6 +34,9 @@ public class work_with_dynamicxpath {
 		 * 6. Chained xpath driver.findElement(By.
 		 * xpath("//tagname[@attribute='Value' //tagname[@attribute='value']"))
 		 * 
+		 * 7. With OR & AND Operator 
+		 * driver.findElement (by.xpath("//tagname[@att='value' OR @att='value']);
+		 * driver.findElement (By.xpath("//tagname[@att='value' AND @att='value']);
 		 */
 	}
 
