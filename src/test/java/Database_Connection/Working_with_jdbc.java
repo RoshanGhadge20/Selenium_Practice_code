@@ -16,6 +16,7 @@ public class Working_with_jdbc {
 		Statement s = con.createStatement();
 		ResultSet rs = s.executeQuery("select * from Employeeinfo");
 		while (rs.next()) {
+			System.out.println("//**************************//");
 			System.out.println("Name: " + rs.getString("name"));
 			System.out.println("ID: " + rs.getInt("id"));
 			System.out.println("Location: " + rs.getString("location"));

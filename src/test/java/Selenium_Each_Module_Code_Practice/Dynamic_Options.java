@@ -15,7 +15,7 @@ public class Dynamic_Options {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 
-		// Working with dynamic elements
+		// Working with dynamic elements	
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		driver.findElement(By.name("q")).sendKeys("javatpoint");
