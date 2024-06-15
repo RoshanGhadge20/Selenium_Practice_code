@@ -1,0 +1,14 @@
+1. Create a Maven Project 
+2. In pom.xml file update all the required dependencies & plugins for project
+3. Use page object modal design pattern where all the (Xpaths & functions are kept in one single file ) & The Actual code of execution contains in another file 
+4. Make implementation of Waits, Actions Class, & more over in general manner 
+5. Create an abstract component for the common/reusable of utilities 
+6. Instead of using the implicit wait mechanism use explicit wait mechanism for the better speedy of execution
+7. Create a common methods & abstract component that extends to child classes 
+8. Create a configuration file ( globalData.properties ) which contains an basic of properties to be needed while execution of program code 
+9. Create a utility file that contains/read all the data from the json file & used it into the program code ( Jackson databind)
+10. Create a take screenshot/Extend Reports  utilities into the base class.
+11. Resolved all the concurrency problems while execution of program code
+12. Add iRetryAnalyzer into the framework so that an all the flaky failed test cases are going to be executed again 
+13. Add Maven implementation into the project so that execution can be done through the command line utilities 
+14. Configure Jenkins (CI/CD) with the project implementation ss
