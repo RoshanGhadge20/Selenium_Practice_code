@@ -2,8 +2,12 @@ package Working_with_Excels;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Iterator;
 
+import org.apache.poi.ss.formula.functions.Rows;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -21,7 +25,6 @@ public class Practice_of_working_with_excel
 		//DataFormatter in Excels 
 		DataFormatter formatter=new DataFormatter();
 		
-		
 		//Working with Excels
 		FileInputStream fin = new FileInputStream("C://Users//Admin//Desktop//Book1.xlsx");
 		XSSFWorkbook workbook=new XSSFWorkbook(fin);
@@ -38,7 +41,6 @@ public class Practice_of_working_with_excel
 		int col_count=row.getPhysicalNumberOfCells();
 		System.out.println("Number of cells into the row are :- "+ col_count);
 		
-		
 		//Retrieving all the details from this excel sheet 
 		for ( int i=0; i<=row_count ; i++)
 		{
@@ -51,6 +53,27 @@ public class Practice_of_working_with_excel
 			}
 			System.out.println("");
 		}
+		
+		
+		//Retrieving the any cell value at specific location 
+		Iterator<Row> rowsIterator=sheet.iterator();
+		
+		while(rowsIterator.hasNext())
+		{
+			Row firstRow=rowsIterator.next();
+			Iterator<Cell> cellIterator=firstRow.cellIterator();
+			while(cellIterator.hasNext())
+			{
+				Cell cell_value=cellIterator.next();
+				if(cell_value.getStringCellValue().equalsIgnoreCase("Principle"))
+				{
+					System.out.println("Cell value:- "+cell_value);
+				}
+			}
+			
+		}
+		
+		
 		
 		
 		//Closing workbook & file
