@@ -2,9 +2,9 @@ package Working_with_Excels;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Array;
 import java.util.Iterator;
 
-import org.apache.poi.ss.formula.functions.Rows;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -13,9 +13,11 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.microsoft.schemas.office.visio.x2012.main.CellType;
+
 public class Practice_of_working_with_excel 
 {
-	public static void main(String[] args) throws IOException 
+	public static void main(String[] args, Object numericToTextConverter) throws IOException 
 	{
 		/*
 		 * // Initialization of driver object WebDriverManager.chromedriver().setup();
@@ -65,10 +67,18 @@ public class Practice_of_working_with_excel
 			while(cellIterator.hasNext())
 			{
 				Cell cell_value=cellIterator.next();
-				if(cell_value.getStringCellValue().equalsIgnoreCase("Principle"))
-				{
-					System.out.println("Cell value:- "+cell_value);
-				}
+				/*
+				 * if(cell_value.getStringCellValue().equalsIgnoreCase("Principle")) {
+				 * System.out.println("Cell value:- "+cell_value); }
+				 */
+				
+				//Adding wrapper class to this 
+				/*
+				 * Array a; if(cell_value.getCellType()==CellType.STRING) {
+				 * System.out.println("Cell Value:- "+ cell_value); } else {
+				 * System.out.println("Cell Value:- "+
+				 * a.add(numericToTextConverter.toText(cell_value.getNumericCellValue()))); }
+				 */
 			}
 			
 		}
