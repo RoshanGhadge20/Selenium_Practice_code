@@ -11,6 +11,16 @@ public class Working_with_jdbc {
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub	
 
+		/** 
+		 * Syntax for jdbc connection
+		 * 
+		 * "jdbc:mysql://"+host+"+port+"+"/Database_Name"
+
+		Connection conn=DriverManager.getConnection("jdbc:mysql://"+"localhost"+"3306"+"/qabdt"+"root"+"root@123");
+		Statement statement=conn.createStatement();
+		ResultSet rSet=statement.executeQuery("Query that needs to be executed");
+		 * 
+		 */
 		Connection con = DriverManager.getConnection("jdbc:mysql://" + "localhost" + ":" + "3306" + "/qadbt", "root",
 				"root@123");
 		Statement s = con.createStatement();
@@ -31,3 +41,4 @@ public class Working_with_jdbc {
 	}
 
 }
+
