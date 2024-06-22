@@ -1,5 +1,4 @@
 package Practice_of_JavaStreams;
-
 import java.util.ArrayList;
 
 public class Basics_of_javastream {

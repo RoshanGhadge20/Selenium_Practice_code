@@ -17,6 +17,12 @@ public class handing_window_based_authentications {
 		driver.findElement(By.xpath("//a[contains(text(),'Basic Auth')]")).click();
 		Thread.sleep(2000);
 		
+		/**
+		 * Way to write a username & password into the URL itself
+		 * 
+		 * https://username:password@baseURL
+		 * 
+		 */
 		driver.get("https://admin:admin@the-internet.herokuapp.com/");
 		
 		driver.close();

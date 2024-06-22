@@ -1,11 +1,9 @@
 package Flipkard_Flow;
-
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class getting_all_list_of_product {
@@ -19,7 +17,6 @@ public class getting_all_list_of_product {
 		List<WebElement> productsElement = driver.findElements(By.className("a.T2CNXf.QqLTQ-"));
 		for (WebElement product : productsElement) {
 			System.out.println(product.getText());
-
 		}
 
 		driver.quit();

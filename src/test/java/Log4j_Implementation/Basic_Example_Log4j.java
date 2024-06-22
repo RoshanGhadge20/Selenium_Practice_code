@@ -13,8 +13,6 @@ public class Basic_Example_Log4j {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         logg.info("Webdriver initiated");
-       
-
         driver.quit();
         logg.info("Driver object closes all the browser windows/tabs");
         //System.out.println("End of program execution");
