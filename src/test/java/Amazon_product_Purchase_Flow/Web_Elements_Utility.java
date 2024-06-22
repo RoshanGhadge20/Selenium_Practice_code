@@ -28,6 +28,10 @@ public class Web_Elements_Utility
 	@FindBy(css = "input.a-button-input") WebElement login_btnElement;
 	@FindBy(css = "input[name='password']") WebElement pass_FieldElement;
 	@FindBy(css = "input[type='submit']") WebElement sign_btnElement;
+	@FindBy(css ="input#twotabsearchtextbox") WebElement search_fieldElement;
+	@FindBy(css ="input#nav-search-submit-button") WebElement search_iconElement;
+	@FindBy (css ="div[data-cy='title-recipe']") WebElement list_ofproductsElement;
+	
 	
 	public void login_with_mobile() 
 	{
@@ -35,6 +39,12 @@ public class Web_Elements_Utility
 		login_btnElement.click();
 		pass_FieldElement.sendKeys("roshan2000");
 		sign_btnElement.click();
+	}
+	
+	public void Search_Product() 
+	{
+	search_fieldElement.sendKeys("Realme 10 Pro");
+	search_iconElement.click();
 	}
 	
 	
