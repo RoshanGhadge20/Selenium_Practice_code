@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class amazon_product_buy 
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
@@ -63,10 +63,15 @@ public class amazon_product_buy
 			System.out.println(product.getText());	
 		}
 		System.out.println("****** Test 4 *******");
+		
+		
+		
+		
+		
+		
+		
 		driver.quit();
 		System.out.println("End Of program execution");
-
-
 
 	}
 
