@@ -64,7 +64,8 @@ public class amazon_product_buy {
     }
 
     @Test(priority = 6)
-    public static void Findind_list_of_prod() {
+    public static void Findind_list_of_prod() 
+    {
         List<WebElement> pro_element = driver.findElements(By.cssSelector("div[data-cy='title-recipe']"));
         // Finding the list of products
         for (WebElement product : pro_element) {
@@ -73,6 +74,14 @@ public class amazon_product_buy {
         //System.out.println("****** Test 4 *******");
     }
 
+    
+    @Test(priority = 7)
+    public static void count_link()
+    {
+    	System.out.println("Total Number of links:- "+(objElements_Utility.count_number_of_links()));
+    }
+    
+    
     @AfterClass
     public static void Tear_down() {
         if (driver != null) {

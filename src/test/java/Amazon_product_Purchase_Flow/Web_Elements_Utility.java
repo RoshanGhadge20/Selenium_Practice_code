@@ -3,6 +3,8 @@ package Amazon_product_Purchase_Flow;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.codec.binary.BaseNCodecOutputStream;
+import org.apache.poi.ss.formula.functions.Count;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,7 +30,6 @@ public class Web_Elements_Utility {
 	}
 
 	// Keeping all the Web_Element store into this file
-
 	@FindBy(css = "input#ap_email")
 	WebElement login_FieldElement;
 	@FindBy(css = "input.a-button-input")
@@ -45,6 +46,7 @@ public class Web_Elements_Utility {
 	WebElement list_ofproductsElement;
 	@FindBy(css = "div.s-suggestion-container")
 	WebElement suggestion_Element;
+	
 
 	public void login_with_mobile() {
 		login_FieldElement.sendKeys("8767003565");
@@ -53,7 +55,8 @@ public class Web_Elements_Utility {
 		sign_btnElement.click();
 	}
 
-	public void Search_Product() throws InterruptedException {
+	public void Search_Product() throws InterruptedException 
+	{
 		search_fieldElement.sendKeys("Realme 10 Pro");
 		// Thread.sleep(5000);
 
@@ -66,10 +69,22 @@ public class Web_Elements_Utility {
 		WebElement ele = w
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.s-suggestion-container")));
 		List<WebElement> sugg_prod = driver.findElements(By.cssSelector("div.s-suggestion-container"));
-		for (WebElement element : sugg_prod) {
+		for (WebElement element : sugg_prod)
+		{
 			System.out.println("List of suggested products are:- " + element.getText());
 		}
 		search_iconElement.click();
+	}
+	
+	public int count_number_of_links()
+	{
+		
+		List<WebElement> count=driver.findElements(By.tagName("a"));
+		//System.out.println(count.size());
+		int count_of_links=count.size();
+		System.out.println(count_of_links);
+		return count_of_links;
+		
 	}
 
 }

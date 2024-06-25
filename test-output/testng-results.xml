@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-25T19:05:00 IST" name="Default suite" finished-at="2024-06-25T19:05:10 IST" duration-ms="9313">
+  <suite started-at="2024-06-25T19:17:38 IST" name="Default suite" finished-at="2024-06-25T19:17:48 IST" duration-ms="9833">
     <groups>
     </groups>
-    <test started-at="2024-06-25T19:05:00 IST" name="Default test" finished-at="2024-06-25T19:05:10 IST" duration-ms="9313">
+    <test started-at="2024-06-25T19:17:38 IST" name="Default test" finished-at="2024-06-25T19:17:48 IST" duration-ms="9833">
       <class name="Amazon_product_Purchase_Flow.amazon_product_buy">
-        <test-method is-config="true" signature="tear_up()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:00 IST" name="tear_up" finished-at="2024-06-25T19:05:03 IST" duration-ms="2425" status="PASS">
+        <test-method is-config="true" signature="tear_up()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:38 IST" name="tear_up" finished-at="2024-06-25T19:17:41 IST" duration-ms="2556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tear_up -->
-        <test-method signature="implement_wait()[pri:1, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:03 IST" name="implement_wait" finished-at="2024-06-25T19:05:03 IST" duration-ms="15" status="PASS">
+        <test-method signature="implement_wait()[pri:1, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:41 IST" name="implement_wait" finished-at="2024-06-25T19:17:41 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- implement_wait -->
-        <test-method signature="Making_obj_of_utility()[pri:2, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:03 IST" name="Making_obj_of_utility" finished-at="2024-06-25T19:05:03 IST" duration-ms="29" status="PASS">
+        <test-method signature="Making_obj_of_utility()[pri:2, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:41 IST" name="Making_obj_of_utility" finished-at="2024-06-25T19:17:41 IST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Making_obj_of_utility -->
-        <test-method signature="login_with_mobile_number()[pri:3, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:03 IST" name="login_with_mobile_number" finished-at="2024-06-25T19:05:04 IST" duration-ms="1105" status="PASS">
+        <test-method signature="login_with_mobile_number()[pri:3, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:41 IST" name="login_with_mobile_number" finished-at="2024-06-25T19:17:42 IST" duration-ms="1031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_with_mobile_number -->
-        <test-method signature="Verify_page_title()[pri:4, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:04 IST" name="Verify_page_title" finished-at="2024-06-25T19:05:06 IST" duration-ms="1927" status="PASS">
+        <test-method signature="Verify_page_title()[pri:4, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:42 IST" name="Verify_page_title" finished-at="2024-06-25T19:17:44 IST" duration-ms="2376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_page_title -->
-        <test-method signature="Searching_product()[pri:5, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:06 IST" name="Searching_product" finished-at="2024-06-25T19:05:09 IST" duration-ms="2921" status="PASS">
+        <test-method signature="Searching_product()[pri:5, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:44 IST" name="Searching_product" finished-at="2024-06-25T19:17:47 IST" duration-ms="3127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Searching_product -->
-        <test-method signature="Findind_list_of_prod()[pri:6, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:09 IST" name="Findind_list_of_prod" finished-at="2024-06-25T19:05:09 IST" duration-ms="582" status="PASS">
+        <test-method signature="Findind_list_of_prod()[pri:6, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:47 IST" name="Findind_list_of_prod" finished-at="2024-06-25T19:17:48 IST" duration-ms="408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Findind_list_of_prod -->
-        <test-method is-config="true" signature="Tear_down()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@63475ace]" started-at="2024-06-25T19:05:09 IST" name="Tear_down" finished-at="2024-06-25T19:05:10 IST" duration-ms="250" status="PASS">
+        <test-method signature="count_link()[pri:7, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:48 IST" name="count_link" finished-at="2024-06-25T19:17:48 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- count_link -->
+        <test-method is-config="true" signature="Tear_down()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@4988d8b8]" started-at="2024-06-25T19:17:48 IST" name="Tear_down" finished-at="2024-06-25T19:17:48 IST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tear_down -->
