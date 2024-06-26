@@ -82,21 +82,29 @@ public class amazon_product_buy {
         System.out.println("Total Number of links:- " + (objElements_Utility.count_number_of_links()));
     }
 
-    @Test(priority = 8)
-    public void check_detail_screen() throws InterruptedException {
-        String child_win = null;
-        String paren_win = driver.getWindowHandle();
-        objElements_Utility.get_details();
-        Set<String> winTitles = driver.getWindowHandles();
-        for (String childWin : winTitles) {
-            if (!paren_win.equals(childWin)) {
-                driver.switchTo().window(childWin);
-                System.out.println("Getting title of child window: " + driver.getTitle());
-            }
-        }
-        Thread.sleep(2000);
-    }
-
+	
+	  @Test(priority = 8)
+	  public void check_detail_screen() throws InterruptedException
+	 {
+			/*
+			 * String child_win = null; String paren_win = driver.getWindowHandle();
+			 * objElements_Utility.get_details();
+			 * 
+			 * Set<String> winTitles = driver.getWindowHandles(); for (String childWin :
+			 * winTitles) { if(!paren_win.equals(childWin)) {
+			 * driver.switchTo().window(childWin);
+			 * System.out.println("Getting title of child window: " + driver.getTitle()); }
+			 * }
+			 * 
+			 * Thread.sleep(2000);
+			 */
+		  
+		  driver.findElement(By.xpath("//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")).click();
+		  Thread.sleep(2000);
+		  
+		  
+	 }
+	 
     @AfterClass
     public static void Tear_down() {
         if (driver != null) {

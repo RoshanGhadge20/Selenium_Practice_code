@@ -57,26 +57,30 @@ public class Web_Elements_Utility {
 		sign_btnElement.click();
 	}
 
-	public void Search_Product() throws InterruptedException {
+	public void Search_Product() throws InterruptedException
+	{
 		search_fieldElement.sendKeys("Realme 10 Pro");
 		// Thread.sleep(5000);
-
 		/*
 		 * getting an StaleElementReferenceException over here while executing the code
 		 * Sol:- 1 ( Thread.sleep(3000)) Sol:- 2 ( implement webdriver wait over here (
 		 * explicit)
 		 */
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement ele = w
-				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.s-suggestion-container")));
-		List<WebElement> sugg_prod = driver.findElements(By.cssSelector("div.s-suggestion-container"));
-		for (WebElement element : sugg_prod) {
-			System.out.println("List of suggested products are:- " + element.getText());
-		}
+		/*
+		 * WebElement ele = w
+		 * .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(
+		 * "div.s-suggestion-container"))); List<WebElement> sugg_prod =
+		 * driver.findElements(By.cssSelector("div.s-suggestion-container")); for
+		 * (WebElement element : sugg_prod) {
+		 * System.out.println("List of suggested products are:- " + element.getText());
+		 * }
+		 */
 		search_iconElement.click();
 	}
 
-	public void get_details() {
+	public void get_details() throws InterruptedException 
+	{
 		try {
 			WebElement productLink = wait.until(ExpectedConditions.presenceOfElementLocated(
 					By.xpath("//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")));
@@ -84,9 +88,11 @@ public class Web_Elements_Utility {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		Thread.sleep(2000);
 	}
 
-	public int count_number_of_links() {
+	public int count_number_of_links()
+	{
 		List<WebElement> count = driver.findElements(By.tagName("a"));
 		// System.out.println(count.size());
 		int count_of_links = count.size();
