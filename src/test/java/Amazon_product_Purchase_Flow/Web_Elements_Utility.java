@@ -3,6 +3,8 @@ package Amazon_product_Purchase_Flow;
 import java.time.Duration;
 import java.util.List;
 
+import javax.swing.text.html.CSS;
+
 import org.apache.commons.codec.binary.BaseNCodecOutputStream;
 import org.apache.poi.ss.formula.functions.Count;
 import org.openqa.selenium.By;
@@ -49,6 +51,7 @@ public class Web_Elements_Utility {
 	WebElement suggestion_Element;
 	@FindBy(xpath = "//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")
 	WebElement product;
+	@FindBy(css = "#buy-now-button") WebElement buy_now_buttonElement;
 
 	public void login_with_mobile() {
 		login_FieldElement.sendKeys("8767003565");
@@ -99,6 +102,12 @@ public class Web_Elements_Utility {
 		System.out.println(count_of_links);
 		return count_of_links;
 
+	}
+	
+	public void click_buy_now() 
+	{
+		buy_now_buttonElement.click();
+		
 	}
 
 }
