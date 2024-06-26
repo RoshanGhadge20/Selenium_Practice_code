@@ -1,12 +1,16 @@
 package Amazon_product_Purchase_Flow;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -54,39 +58,50 @@ public class amazon_product_buy {
         } else {
             System.out.println("Fail, Page title does not match");
         }
-       // System.out.println("******* Test 2 Passed ******");
+        // System.out.println("******* Test 2 Passed ******");
     }
 
     @Test(priority = 5)
     public static void Searching_product() throws InterruptedException {
         objElements_Utility.Search_Product();
-       // System.out.println("******* Test 3 *********");
+        // System.out.println("******* Test 3 *********");
     }
 
     @Test(priority = 6)
-    public static void Findind_list_of_prod() 
-    {
+    public static void Findind_list_of_prod() {
         List<WebElement> pro_element = driver.findElements(By.cssSelector("div[data-cy='title-recipe']"));
         // Finding the list of products
         for (WebElement product : pro_element) {
-           System.out.println(product.getText());
+            System.out.println(product.getText());
         }
-        //System.out.println("****** Test 4 *******");
+        // System.out.println("****** Test 4 *******");
     }
 
-    
     @Test(priority = 7)
-    public static void count_link()
-    {
-    	System.out.println("Total Number of links:- "+(objElements_Utility.count_number_of_links()));
+    public static void count_link() {
+        System.out.println("Total Number of links:- " + (objElements_Utility.count_number_of_links()));
     }
-    
-    
+
+    @Test(priority = 8)
+    public void check_detail_screen() throws InterruptedException {
+        String child_win = null;
+        String paren_win = driver.getWindowHandle();
+        objElements_Utility.get_details();
+        Set<String> winTitles = driver.getWindowHandles();
+        for (String childWin : winTitles) {
+            if (!paren_win.equals(childWin)) {
+                driver.switchTo().window(childWin);
+                System.out.println("Getting title of child window: " + driver.getTitle());
+            }
+        }
+        Thread.sleep(2000);
+    }
+
     @AfterClass
     public static void Tear_down() {
         if (driver != null) {
             driver.quit();
         }
-        //System.out.println("End Of program execution");
+        // System.out.println("End Of program execution");
     }
 }

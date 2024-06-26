@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Web_Elements_Utility {
 	WebDriver driver;
+	WebDriverWait wait;
 
 	/**
 	 * Syntax to write down the webelement using findby
@@ -46,7 +47,8 @@ public class Web_Elements_Utility {
 	WebElement list_ofproductsElement;
 	@FindBy(css = "div.s-suggestion-container")
 	WebElement suggestion_Element;
-	
+	@FindBy(xpath = "//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")
+	WebElement product;
 
 	public void login_with_mobile() {
 		login_FieldElement.sendKeys("8767003565");
@@ -55,8 +57,7 @@ public class Web_Elements_Utility {
 		sign_btnElement.click();
 	}
 
-	public void Search_Product() throws InterruptedException 
-	{
+	public void Search_Product() throws InterruptedException {
 		search_fieldElement.sendKeys("Realme 10 Pro");
 		// Thread.sleep(5000);
 
@@ -69,22 +70,29 @@ public class Web_Elements_Utility {
 		WebElement ele = w
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.s-suggestion-container")));
 		List<WebElement> sugg_prod = driver.findElements(By.cssSelector("div.s-suggestion-container"));
-		for (WebElement element : sugg_prod)
-		{
+		for (WebElement element : sugg_prod) {
 			System.out.println("List of suggested products are:- " + element.getText());
 		}
 		search_iconElement.click();
 	}
-	
-	public int count_number_of_links()
-	{
-		
-		List<WebElement> count=driver.findElements(By.tagName("a"));
-		//System.out.println(count.size());
-		int count_of_links=count.size();
+
+	public void get_details() {
+		try {
+			WebElement productLink = wait.until(ExpectedConditions.presenceOfElementLocated(
+					By.xpath("//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")));
+			productLink.click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int count_number_of_links() {
+		List<WebElement> count = driver.findElements(By.tagName("a"));
+		// System.out.println(count.size());
+		int count_of_links = count.size();
 		System.out.println(count_of_links);
 		return count_of_links;
-		
+
 	}
 
 }

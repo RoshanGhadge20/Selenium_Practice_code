@@ -5,9 +5,9 @@
     <classes>
       <class name="Amazon_product_Purchase_Flow.amazon_product_buy">
         <methods>
-          <include name="count_link"/>
           <include name="Searching_product"/>
           <include name="Tear_down"/>
+          <include name="check_detail_screen"/>
           <include name="tear_up"/>
         </methods>
       </class> <!-- Amazon_product_Purchase_Flow.amazon_product_buy -->
