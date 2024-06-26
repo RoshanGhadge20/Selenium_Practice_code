@@ -1,21 +1,14 @@
 package Amazon_product_Purchase_Flow;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v120.systeminfo.model.VideoDecodeAcceleratorCapability;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class amazon_product_buy {
@@ -26,7 +19,7 @@ public class amazon_product_buy {
 	@BeforeClass
 	public static void tear_up() {
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get(
 				"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
@@ -102,10 +95,9 @@ public class amazon_product_buy {
 		driver.findElement(By.xpath("//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")).click();
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(priority = 9)
-	public static void buy_now() throws InterruptedException
-	{
+	public static void buy_now() throws InterruptedException {
 		objElements_Utility.click_buy_now();
 		Thread.sleep(2000);
 	}
