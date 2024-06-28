@@ -1,6 +1,8 @@
 package Amazon_product_Purchase_Flow;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
@@ -27,94 +29,83 @@ public class amazon_product_buy {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(
-				"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
+		driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
 		logg.info("Webdriver initiated");
 	}
 
 	@Test(priority = 1)
-	public static void implement_wait() {
+	public void implement_wait() {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		logg.info("Implemented implicit wait");
 	}
 
 	@Test(priority = 2)
-	public static void Making_obj_of_utility() {
+	public void Making_obj_of_utility() {
 		objElements_Utility = new Web_Elements_Utility(driver);
-		logg.info("object of utility class is created");
+		logg.info("Object of utility class is created");
 	}
 
 	@Test(priority = 3)
-	public static void login_with_mobile_number() {
-		// login_with_mobile_number& password
+	public void login_with_mobile_number() {
 		objElements_Utility.login_with_mobile();
-		System.out.println("******* Test 1 Passed ******");
+		logg.info("Method called login with mobile number");
 	}
 
 	@Test(priority = 4)
-	public static void Verify_page_title() {
-		// Getting page title & verify it
+	public void Verify_page_title() {
 		String exp_title = "Your Amazon.in";
 		String act_title = driver.getTitle();
-		System.out.println(act_title);
+		logg.info("Actual title: " + act_title);
 		if (exp_title.equals(act_title)) {
-			System.out.println("Title of page :- " + act_title);
+			logg.info("Title of page matches: " + act_title);
 		} else {
-			System.out.println("Fail, Page title does not match");
+			logg.error("Fail, Page title does not match");
 		}
-		// System.out.println("******* Test 2 Passed ******");
 	}
 
 	@Test(priority = 5)
-	public static void Searching_product() throws InterruptedException {
+	public void Searching_product() throws InterruptedException {
 		objElements_Utility.Search_Product();
-		// System.out.println("******* Test 3 *********");
+		logg.info("Method called searching product");
 	}
 
 	@Test(priority = 6)
-	public static void Findind_list_of_prod() {
+	public void Finding_list_of_prod() {
 		List<WebElement> pro_element = driver.findElements(By.cssSelector("div[data-cy='title-recipe']"));
-		// Finding the list of products
 		for (WebElement product : pro_element) {
-			System.out.println(product.getText());
+			logg.info(product.getText());
 		}
-		// System.out.println("****** Test 4 *******");
 	}
 
 	@Test(priority = 7)
-	public static void count_link() {
-		System.out.println("Total Number of links:- " + (objElements_Utility.count_number_of_links()));
+	public void count_link() {
+		logg.info("Total Number of links: " + objElements_Utility.count_number_of_links());
 	}
 
 	@Test(priority = 8)
 	public void check_detail_screen() throws InterruptedException {
-		/*
-		 * String child_win = null; String paren_win = driver.getWindowHandle();
-		 * objElements_Utility.get_details();
-		 * 
-		 * Set<String> winTitles = driver.getWindowHandles(); for (String childWin :
-		 * winTitles) { if(!paren_win.equals(childWin)) {
-		 * driver.switchTo().window(childWin);
-		 * System.out.println("Getting title of child window: " + driver.getTitle()); }
-		 * }
-		 * 
-		 * Thread.sleep(2000);
-		 */
-
-		driver.findElement(By.xpath("//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")).click();
-		Thread.sleep(2000);
+		objElements_Utility.get_details();
+		Set<String> win_han= driver.getWindowHandles();
+		Iterator<String> it=win_han.iterator();
+		while(it.hasNext())
+		{
+			System.out.println("Window Id:- "+ (it.next()).toString());
+		}
 	}
 
+	String chil_winString="F8ECA481E5F89378D66AF70D9EA7251F";
 	@Test(priority = 9)
-	public static void buy_now() throws InterruptedException {
+	public void buy_now() throws InterruptedException {
+		driver.switchTo().window(chil_winString);
 		objElements_Utility.click_buy_now();
-		Thread.sleep(2000);
+	
 	}
 
 	@AfterClass
-	public static void Tear_down() {
+	public void Tear_down() {
 		if (driver != null) {
 			driver.quit();
 		}
-		// System.out.println("End Of program execution");
+		logg.info("Webdriver closed");
 	}
 }

@@ -7,7 +7,6 @@
         <methods>
           <include name="buy_now"/>
           <include name="Tear_down"/>
-          <include name="check_detail_screen"/>
           <include name="tear_up"/>
         </methods>
       </class> <!-- Amazon_product_Purchase_Flow.amazon_product_buy -->
