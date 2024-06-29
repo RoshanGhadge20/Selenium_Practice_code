@@ -26,10 +26,8 @@ public class Handling_multiple_windows {
 		String childwin = it.next();
 		System.out.println("Parent window title:- " + parentwin);
 		System.out.println("Parent window title:- " + childwin);
-
 		driver.switchTo().window(parentwin);
 		driver.switchTo().window(childwin);
-
 		driver.quit();
 		System.out.println("End of program Execution");
 	}

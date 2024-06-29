@@ -6,8 +6,8 @@ public class Encode_Decode_Password
 {
 	public static void main(String[] args) 
 	{
-		String string="Roshan@123";
-		byte[] encode_pass=Base64.getEncoder().encode(string.getBytes());
+		String strstring="Roshan@123";
+		byte[] encode_pass=Base64.getEncoder().encode(strstring.getBytes());
 		System.out.println("Encoded Password:- "+encode_pass);
 		
 		byte[] decode_pass=Base64.getDecoder().decode(encode_pass);
