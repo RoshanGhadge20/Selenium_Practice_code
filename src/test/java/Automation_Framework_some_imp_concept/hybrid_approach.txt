@@ -1,0 +1,43 @@
+A hybrid framework is an approach that can be used to combine elements of both the keyword and data-driven framework. In this framework, 
+test scripts are designed modularly. Each module is capable of functioning independently of the others.
+
+Structure of a Hybrid Framework
+Test Data:
+Stored in external files like Excel, CSV, or databases.
+Managed by utility classes that handle reading and writing operations.
+
+Keywords:
+Defined in external files like Excel or property files.
+Implemented in a way that maps keywords to methods in code.
+
+Page Objects:
+Classes that represent web pages, containing locators and methods for interacting with web elements.
+
+Test Scripts:
+Use a combination of data-driven and keyword-driven approaches.
+Call methods from page objects and utility classes.
+
+Utilities:
+Classes that provide common functionality like logging, reporting, and file handling.
+
+Configuration:
+Property files or XML files that store configuration details like browser settings, environment details, etc.
+
+Directory Structure of hybrid approach 
+/HybridFramework
+  /src
+    /main
+      /java
+        /pages
+          - LoginPage.java
+          - HomePage.java
+        /tests
+          - LoginTest.java
+        /utils
+          - ExcelUtils.java
+          - ConfigReader.java
+        /keywords
+          - KeywordEngine.java
+        /config
+          - config.properties
+          - keywords.xlsx
