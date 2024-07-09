@@ -2,7 +2,6 @@ package Working_with_Excels;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -15,9 +14,9 @@ public class DataDrivenTesting {
 
 		// Basic setup for working with excels
 		FileInputStream fin = new FileInputStream(
-				"E://Selenium_Practice_Code_learning//Selenium_practice_code//Working_With_Excels//Book1.xlsx");
+				"C://Users//Admin//Desktop//Book1.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
-		XSSFSheet sheet = workbook.getSheet("Test");
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		System.out.println("Sheet Name is :- " + sheet.getSheetName());
 
 		// Working with rows & columns

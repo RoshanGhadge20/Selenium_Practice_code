@@ -1,0 +1,52 @@
+Keyword-Driven Testing
+Definition: Keyword-driven testing involves creating test cases using a set of predefined keywords, which represent high-level actions or operations.
+
+Key Characteristics:
+
+Keyword Abstraction: Test scripts are written using keywords, each representing a specific action or method. These keywords are then mapped to the underlying code that performs the action.
+Non-Technical Users: Allows non-technical users to create and understand test cases without needing to write code, as they can simply use the predefined keywords.
+Modularity: High level of abstraction and modularity, as each keyword can be reused across multiple test cases.
+Advantages:
+
+Ease of Use: Non-technical stakeholders can write and understand test cases.
+Readability: Test cases are more readable and easier to understand, as they use plain language keywords.
+Maintenance: Changes in the application under test can often be managed by updating the keywords rather than all test cases.
+Example:
+
+java
+Copy code
+public class KeywordDrivenTest {
+    public void performAction(String keyword, String... params) {
+        switch (keyword) {
+            case "openBrowser":
+                openBrowser(params[0]);
+                break;
+            case "navigateTo":
+                navigateTo(params[0]);
+                break;
+            case "click":
+                click(params[0]);
+                break;
+            case "enterText":
+                enterText(params[0], params[1]);
+                break;
+            // More keywords...
+        }
+    }
+
+    public void openBrowser(String browserType) {
+        // Implementation
+    }
+
+    public void navigateTo(String url) {
+        // Implementation
+    }
+
+    public void click(String element) {
+        // Implementation
+    }
+
+    public void enterText(String element, String text) {
+        // Implementation
+    }
+}

@@ -1,0 +1,20 @@
+An automation framework in the context of software testing is a structured set of guidelines, tools, 
+and practices designed to make the process of automated testing more efficient, consistent, and 
+reliable. It provides a foundation that facilitates the creation, execution, and management of automated
+test scripts. Here are the key concepts and components of an automation framework
+
+Components of an Automation Framework
+
+Test Script Repository: A structured directory or repository where all test scripts are stored and managed.
+
+Libraries and Utilities: Reusable functions, classes, and methods that perform common actions like logging, exception handling, and data manipulation.
+
+Test Data Management: Mechanisms for managing and accessing test data, which can be stored in files, databases, or other data sources.
+
+Configuration Files: Files that contain configuration settings for the test environment, such as URLs, database connections, and environment-specific variables.
+
+Test Execution Engine: The core component that drives the execution of test scripts, handles scheduling, and manages test execution flow.
+
+Reporting and Logging: Tools and mechanisms for generating detailed test execution reports and logs, which help in analyzing test results and diagnosing issues.
+
+Integration with CI/CD: Integration with Continuous Integration and Continuous Deployment (CI/CD) pipelines to enable automated test execution as part of the build and deployment process.

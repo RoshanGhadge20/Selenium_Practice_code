@@ -1,0 +1,79 @@
+1. Selenium
+Type: Web Application Testing
+Language Support: Multiple (Java, C#, Python, Ruby, JavaScript, etc.)
+Features:
+Supports multiple browsers (Chrome, Firefox, IE, Safari)
+Integrates with various tools (TestNG, JUnit, Maven, Jenkins)
+Selenium Grid for parallel test execution
+
+2. Appium
+Type: Mobile Application Testing
+Language Support: Multiple (Java, JavaScript, Ruby, Python, etc.)
+Features:
+Cross-platform (iOS, Android)
+Supports native, hybrid, and mobile web applications
+Utilizes WebDriver protocol
+
+3. JUnit
+Type: Unit Testing Framework for Java
+Language Support: Java
+Features:
+Annotations for easy identification of test methods
+Integration with build tools like Maven and Gradle
+Supports test suites and parameterized tests
+
+4. TestNG
+Type: Testing Framework for Java
+Language Support: Java
+Features:
+More flexible and powerful than JUnit
+Supports data-driven testing, parallel test execution
+Advanced configuration and reporting
+
+5. Cucumber
+Type: BDD (Behavior-Driven Development)
+Language Support: Multiple (Java, Ruby, Scala, Groovy, etc.)
+Features:
+Write tests in Gherkin language (plain English)
+Facilitates collaboration between technical and non-technical stakeholders
+Integrates with Selenium and other tools
+
+6. Robot Framework
+Type: Generic Test Automation Framework
+Language Support: Python (extendable with libraries)
+Features:
+Keyword-driven approach
+Extensible with numerous libraries (SeleniumLibrary, DatabaseLibrary)
+Good for acceptance testing and ATDD (Acceptance Test-Driven Development)
+
+7. Cypress
+Type: End-to-End Testing Framework
+Language Support: JavaScript
+Features:
+Fast and reliable testing for modern web applications
+Built-in assertions and stubbing
+Real-time reloads and debugging
+
+8. Protractor
+Type: End-to-End Testing for Angular Applications
+Language Support: JavaScript
+Features:
+Specifically designed for Angular applications
+Supports Angular-specific locators
+Integrates with Jasmine, Mocha
+
+9. JUnit 5 (JUnit Jupiter)
+Type: Unit Testing Framework for Java
+Language Support: Java
+Features:
+Modular architecture
+Support for new features like nested tests, dynamic tests
+Enhanced extensibility with custom extensions
+
+10. Katalon Studio
+Type: Web, API, Mobile, and Desktop Testing
+Language Support: Groovy (Java-based)
+Features:
+All-in-one solution for various types of testing
+Built-in keywords for common actions
+Integrates with CI/CD tools, JIRA, qTest, and more

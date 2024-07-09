@@ -1,0 +1,35 @@
+Data-driven and keyword-driven testing are two popular approaches in automated testing frameworks. Here are the major differences between them:
+
+Data-Driven Testing
+Definition: Data-driven testing involves running the same set of test scripts multiple times with different sets of input data.
+
+Key Characteristics:
+
+Test Data Externalization: Test data is stored separately from the test scripts, often in external files like Excel, CSV, XML, or databases.
+Reusability: The same test script can be reused with different data sets, reducing the need for writing multiple test cases.
+Parameterization: Test scripts are parameterized to accept different inputs, enabling them to handle a variety of test scenarios.
+Focus: Primarily focuses on validating the same functionality with multiple data sets.
+Advantages:
+
+Efficiency: Reduces redundancy by allowing a single script to cover multiple scenarios.
+Maintenance: Easier to maintain as changes in test data do not require changes in the test scripts.
+Scalability: Adding new test cases is as simple as adding new data sets.
+Example:
+
+java
+Copy code
+public class DataDrivenTest {
+    @Test(dataProvider = "userData")
+    public void testLogin(String username, String password) {
+        // Steps to perform login
+    }
+
+    @DataProvider(name = "userData")
+    public Object[][] getData() {
+        return new Object[][] {
+            {"user1", "pass1"},
+            {"user2", "pass2"},
+            {"user3", "pass3"}
+        };
+    }
+}
