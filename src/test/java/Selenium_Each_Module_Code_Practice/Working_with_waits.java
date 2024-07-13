@@ -22,6 +22,7 @@ public class Working_with_waits {
 		
 		//Working with implicit waits
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//implicit wait is defines through the driver.manage().timeouts() => method 
 		
 		//Working with colors
 		Selecting_colors_code(driver);
@@ -29,6 +30,8 @@ public class Working_with_waits {
 		//Working with Explicit wait
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.alertIsPresent());
+		// Explicit wait is always defines through the webdriverwait 
+		
 		
 		
 		

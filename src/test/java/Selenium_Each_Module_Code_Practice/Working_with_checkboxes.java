@@ -3,6 +3,7 @@ package Selenium_Each_Module_Code_Practice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.NeedsLocalLogs;
 
 public class Working_with_checkboxes {
 
@@ -17,7 +18,16 @@ public class Working_with_checkboxes {
 		driver.close();
 		System.out.println("End of Program Execution");
 		
+		
+		// To get Number of checkboxes present in webpage
+		/*
+		 * 1. Find out common attribute for checkbox 
+		 * 2. apply the .size() method with checkbox 
+		 * 3. verify it with the count
+		 * 
+		 */	
 	}
+	
 	
 	public static void click_checkbox(WebDriver driver)
 	{

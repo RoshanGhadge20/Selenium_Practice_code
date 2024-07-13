@@ -1,7 +1,6 @@
 package Selenium_Each_Module_Code_Practice;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,14 +28,25 @@ public class Dynamic_Options {
 		// is available
 		for (int i = 0; i < elements.size(); i++) {
 			System.out.println("Options available: " + elements.get(i).getText());
-			if (elements.get(i).getText().equals("javatpoint")) {
+			if (elements.get(i).getText().equalsIgnoreCase("javatpoint")) {
 				elements.get(i).click();
 				break;
 			}
 		}
-
+		
+		
+		// Another way 
+		for(WebElement option:elements)
+		{
+			if(option.getText().equalsIgnoreCase("javatpoint"))
+			{
+				option.click();
+			}
+		}
+		
+		
 		Thread.sleep(5000);
 		driver.quit();
-		System.out.println("End of program code execution");
+		
 	}
 }

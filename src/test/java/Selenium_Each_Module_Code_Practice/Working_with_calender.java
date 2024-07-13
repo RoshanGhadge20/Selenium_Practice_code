@@ -1,7 +1,6 @@
 package Selenium_Each_Module_Code_Practice;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +19,7 @@ public class Working_with_calender {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		// driver.get("https://testautomationpractice.blogspot.com/");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Explicit wait
 
 		// Working with Calender Method 1 by using sendkeys method
 		// driver.findElement(By.cssSelector("input#datepicker")).sendKeys("03/25/2024");
@@ -32,12 +31,6 @@ public class Working_with_calender {
 		driver.findElement(By.xpath("//button[@data-testid='uitk-date-selector-input1-default']")).click();
 		driver.findElement(By.xpath("//div[@aria-lable='Monday, June 3, 2024, Selected start date']")).click();
 		driver.findElement(By.xpath("//button[@data-stid='apply-date-selector']"));
-		
-		
-		
-		
-		
-		
 		
 		driver.close();
 		System.out.println("End of Program Code");

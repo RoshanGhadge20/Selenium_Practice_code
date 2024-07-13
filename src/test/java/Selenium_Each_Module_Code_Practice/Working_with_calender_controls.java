@@ -10,9 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Working_with_calender_controls {
+public class Working_with_calender_controls 
+{
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException 
+	{
         String expectedFromDateStr = "01/20/2020";
         String expectedToDateStr = "02/26/2020";
         String expectedFromDate = "20";
@@ -64,16 +66,18 @@ public class Working_with_calender_controls {
         Thread.sleep(10000);
 
         // Verify whether the values are as expected
-        String selectedFromDateStr = fromDP.getAttribute("value");
+        String selectedFromDateStr = fromDP.getAttribute("value"); // get attribute is used for fetching the value of attribute ( Webelement )
         String selectedToDateStr = toDP.getAttribute("value");
 
-        if (selectedFromDateStr.equals(expectedFromDateStr) && selectedToDateStr.equals(expectedToDateStr)) {
+        if (selectedFromDateStr.equals(expectedFromDateStr) && selectedToDateStr.equals(expectedToDateStr))
+        {
             System.out.println("Unit Test of jQuery Calendar passed");
-        } else {
+        } else 
+        {
             System.out.println("Unit Test of jQuery Calendar failed");
         }
 
-        driver.quit();
+        driver.quit(); // Closing all the tabs
         System.out.println("End of Program Execution");
-}
+		}
 }
