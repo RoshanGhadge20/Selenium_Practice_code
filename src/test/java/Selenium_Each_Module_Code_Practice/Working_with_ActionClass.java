@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Working_with_ActionClass {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException
+	{
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -63,4 +63,12 @@ public class Working_with_ActionClass {
 		act.moveToElement(resElement).dragAndDropBy(resElement, 100,150).build().perform();
 		System.out.println("resize element");
 	}
+	
+	/*
+	 * Build and Perform are methods in the Selenium Actions class. They are used
+	 * together to create and execute complex user interactions on a web page. Build
+	 * is used to create an instance of the Actions class and associate it with a
+	 * specific WebDriver instance
+	 */
+	
 }

@@ -2,15 +2,15 @@ package Selenium_Each_Module_Code_Practice;
 
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Handling_multiple_windows {
-	public static void main(String[] args) {
+public class Handling_multiple_windows 
+{
+	public static void main(String[] args) 
+	{
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
