@@ -1,7 +1,6 @@
 package Selenium_Each_Module_Code_Practice;
 
 import java.time.chrono.ThaiBuddhistEra;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,9 +29,5 @@ public class scroll_up_and_scroll_down
 		
 		driver.quit();
 		System.out.println("End of Program code execution");
-		
-		
-		
-		
 	}
 }

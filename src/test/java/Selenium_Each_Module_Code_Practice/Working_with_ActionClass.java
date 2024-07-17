@@ -66,8 +66,9 @@ public class Working_with_ActionClass {
 	
 	/*
 	 * Build and Perform are methods in the Selenium Actions class. They are used
-	 * together to create and execute complex user interactions on a web page. Build
-	 * is used to create an instance of the Actions class and associate it with a
+	 * together to create and execute complex user interactions on a web page. 
+	 * 
+	 * Build is used to create an instance of the Actions class and associate it with a
 	 * specific WebDriver instance
 	 */
 	
