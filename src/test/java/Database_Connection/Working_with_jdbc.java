@@ -6,9 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Working_with_jdbc {
 
-	public static void main(String[] args) throws SQLException {
+public class Working_with_jdbc 
+{
+
+	public static void main(String[] args) throws SQLException 
+	{
 		// TODO Auto-generated method stub	
 
 		/** 
@@ -33,12 +36,15 @@ public class Working_with_jdbc {
 			System.out.println("Age: " + rs.getInt("age"));
 			System.out.println("****************************");
 		}
+		
 		rs.close();
 		s.close();
 		con.close();
 		System.out.println("End of program code execution");
-
+		
+		
 	}
+	
 
 }
 

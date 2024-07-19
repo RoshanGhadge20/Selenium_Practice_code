@@ -4,11 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
 import java.util.concurrent.TimeUnit;
 
-public class CaptureVid {
-   public static void main(String[] args) throws Exception {
-
+public class CaptureVid
+{
+   public static void main(String[] args) throws Exception
+   {
+	   
+		/*
+		 * ScreenRecorderUtil file is used for the utility of screen recording
+		 * 
+		 */	   
+	   
       // start screen recording
       ScreenRecorderUtil.startRecord("main");
 
