@@ -25,7 +25,8 @@ public class Practice_set_of_streams_into_automation
         
         // Debug: Print fetched elements
         System.out.println("Fetched Elements:");
-        for (WebElement element : elementslist) {
+        for (WebElement element : elementslist) 
+        {
             System.out.println(element.getText());
         }
         
