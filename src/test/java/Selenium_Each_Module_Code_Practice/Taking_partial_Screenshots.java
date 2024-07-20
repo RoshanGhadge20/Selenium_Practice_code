@@ -2,7 +2,6 @@ package Selenium_Each_Module_Code_Practice;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -37,10 +36,5 @@ public class Taking_partial_Screenshots
 
         driver.close();
         System.out.println("End of program code");
-	}
-
-	private static File newfile(String string) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

@@ -10,20 +10,18 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Friendly_Locatorss {
-	public static void main(String[] args)
-	{
-		
-		// Practice set for the friendly locators 
-		
+	public static void main(String[] args) {
+
+		// Practice set for the friendly locators
+
 		WebDriverManager.chromiumdriver().setup();
-		ChromeOptions opt=new ChromeOptions();
+		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("Headless");
-		WebDriver driver=new ChromeDriver(opt);
-		
-		
+		WebDriver driver = new ChromeDriver(opt);
+
 		driver.get("https://demoqa.com/select-menu");
 		driver.manage().window().maximize();
-				
+
 		/*
 		 * // below Relative Locators driver.findElement(By.xpath(
 		 * "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]"
@@ -39,24 +37,30 @@ public class Friendly_Locatorss {
 		 * above(checkBox)); String abovetext=abovecheckbox.getText();
 		 * System.out.println("above side of items"+abovetext);
 		 */
-		
+
 		driver.findElement(By.xpath("//div[normalize-space()='Widgets']")).click();
-		
-		
-		//Toleftof relative operator
-		WebElement items=driver.findElement(By.xpath("//a[contains(text(),'Main Item 2')]"));
-		WebElement leftitem=driver.findElement(RelativeLocator.with(By.tagName("a")).toLeftOf(items));
-		System.out.println("Left side of items"+leftitem);
-		
-		//toRightOff relative operator
-		WebElement rightitem=driver.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(items));
-		System.out.println("Right side of item"+rightitem);
-		
-		
+
+		// Toleftof relative operator
+		WebElement items = driver.findElement(By.xpath("//a[contains(text(),'Main Item 2')]"));
+		WebElement leftitem = driver.findElement(RelativeLocator.with(By.tagName("a")).toLeftOf(items));
+
+		System.out.println("Left side of items" + leftitem);
+
+		// toRightOff relative operator
+		WebElement rightitem = driver.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(items));
+		System.out.println("Right side of item" + rightitem);
+
+		// toAbove Off relative operator
+		WebElement abovElement = driver.findElement(By.xpath(""));
+		WebElement aboveitem = driver.findElement(RelativeLocator.with(By.xpath("")).above(null));
+
+		// toBelow off relative operator
+		WebElement beloWebElement = driver.findElement(By.xpath(""));
+		WebElement belowitem = driver.findElement(RelativeLocator.with(By.tagName("")).below(""));
+
 		driver.close();
 		System.out.println("End of program execution");
-		
-		
+
 	}
 
 }
