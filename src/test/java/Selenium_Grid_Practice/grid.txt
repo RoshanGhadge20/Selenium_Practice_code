@@ -1,0 +1,15 @@
+Selenium Grid
+
+Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines. This is done by routing commands to remote web browser instances, where one server acts as the hub. This hub routes test commands that are in JSON format to multiple registered Grid nodes.
+
+Hub enables simultaneous execution of tests on multiple machines, managing different browsers centrally, instead of conducting different tests for each of them. Selenium Grid makes cross browser testing easy as a single test can be carried on multiple machines and browsers, all together, 
+making it easy to analyze and compare the results.The two major components of the Selenium Grid architecture are:
+
+1 Hub :-  is a server that accepts the access requests from the WebDriver client, routing the JSON test commands to the remote drives on nodes. It takes instructions from the client and executes them remotely on the various nodes in parallel
+2 Node :-  is a remote device that consists of a native OS and a remote WebDriver. It receives requests from the hub in the form of JSON test commands and executes them using WebDriver
+
+
+Testers should use Selenium Grid in the following circumstances:
+
+1. To run tests on multiple browsers and their versions, different devices, and operating systems
+2. To reduce the time that a test suite takes to complete execution
