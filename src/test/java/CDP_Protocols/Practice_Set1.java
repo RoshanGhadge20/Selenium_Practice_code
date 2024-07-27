@@ -25,7 +25,7 @@ public class Practice_Set1 {
         int deviceScaleFactor = 3; // Device scale factor (high DPI)
         boolean isMobile = true; // Emulate mobile device
 
-        devTools.send(Emulation.setDeviceMetricsOverride(
+        devTools.send(Emulation.setDeviceMe9tricsOverride(
                 width, height, deviceScaleFactor, isMobile, null, null, null, null, null, null, null, null, null, java.util.Optional.empty()
         ));
         
