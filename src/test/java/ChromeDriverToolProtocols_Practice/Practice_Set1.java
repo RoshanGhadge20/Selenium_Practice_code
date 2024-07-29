@@ -1,4 +1,4 @@
-package CDP_Protocols;
+package ChromeDriverToolProtocols_Practice;
 
  
 import org.openqa.selenium.WebDriver;

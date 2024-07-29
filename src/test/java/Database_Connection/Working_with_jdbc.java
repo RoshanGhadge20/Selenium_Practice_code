@@ -37,6 +37,13 @@ public class Working_with_jdbc
 			System.out.println("****************************");
 		}
 		
+		ResultSet rs1=s.executeQuery("Select * from orders");
+		while(rs1.next())
+		{
+			System.out.println("---------------------");
+			System.out.println("Order Id" + rs1.getInt("OrderID"));
+			System.out.println("---------------------");
+		}
 		rs.close();
 		s.close();
 		con.close();
