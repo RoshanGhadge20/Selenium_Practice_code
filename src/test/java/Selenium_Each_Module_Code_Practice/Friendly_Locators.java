@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.locators.RelativeLocator;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Friendly_Locatorss {
-	public static void main(String[] args) {
-
+public class Friendly_Locators
+{
+	public static void main(String[] args) 
+	{
 		// Practice set for the friendly locators
 
 		WebDriverManager.chromiumdriver().setup();
@@ -47,18 +47,18 @@ public class Friendly_Locatorss {
 		System.out.println("Left side of items" + leftitem);
 
 		// toRightOff relative operator
-		WebElement rightitem = driver.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(items));
-		System.out.println("Right side of item" + rightitem);
+		WebElement right_item = driver.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(items));
+		System.out.println("Right side of item" + right_item);
 
 		// toAbove Off relative operator
-		WebElement abovElement = driver.findElement(By.xpath(""));
-		WebElement aboveitem = driver.findElement(RelativeLocator.with(By.xpath("")).above(null));
+		WebElement abovElement = driver.findElement(By.xpath("//a[contains(text(),'Main Item 2')]"));
+		WebElement above_item = driver.findElement(RelativeLocator.with(By.xpath("a")).above(abovElement));
 
 		// toBelow off relative operator
-		WebElement beloWebElement = driver.findElement(By.xpath(""));
-		WebElement belowitem = driver.findElement(RelativeLocator.with(By.tagName("")).below(""));
+		WebElement beloWebElement = driver.findElement(By.xpath("//a[contains(text(),'Main Item 2')]"));
+		WebElement below_item = driver.findElement(RelativeLocator.with(By.tagName("")).below(beloWebElement));
 
-		driver.close();
+		driver.quit();
 		System.out.println("End of program execution");
 
 	}

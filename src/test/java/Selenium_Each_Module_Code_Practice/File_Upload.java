@@ -1,10 +1,8 @@
 package Selenium_Each_Module_Code_Practice;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class File_Upload 
@@ -15,15 +13,15 @@ public class File_Upload
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		try {
+		try 
+		{
 			driver.manage().window().maximize();
-
 			driver.get("https://xndev.com/display-image/");
 			WebElement element=driver.findElement(By.cssSelector("input[type='file']"));
 			element.sendKeys("C://Users//Admin//Downloads//social.png");
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+		} catch (InterruptedException e) 
+		{					
 			e.printStackTrace();
 			System.out.println("Exception caughts");
 		}

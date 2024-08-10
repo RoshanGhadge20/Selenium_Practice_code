@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Get_height_and_weight_of_element 
@@ -14,7 +13,7 @@ public class Get_height_and_weight_of_element
 	{
 
 		WebDriverManager.chromedriver().setup();
-		//ChromeOptions 
+		//ChromeOptions to set chromepreferences 
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("Headless");
 		
@@ -25,8 +24,7 @@ public class Get_height_and_weight_of_element
 		// Get height and weight of the webelement
 		driver.get("https://testautomationpractice.blogspot.com/");
 		WebElement namefield = driver.findElement(By.xpath("//input[@id='name']"));
-		
-		
+
 		System.out.println(namefield.getRect().getDimension().getHeight());
 		System.out.println(namefield.getRect().getDimension().getWidth());
 		System.out.println(namefield.getRect().getHeight());

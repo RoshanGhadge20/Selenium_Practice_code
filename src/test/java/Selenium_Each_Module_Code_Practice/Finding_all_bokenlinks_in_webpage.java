@@ -6,7 +6,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,10 +15,12 @@ import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Finding_all_bokenlinks_in_webpage {
+public class Finding_all_bokenlinks_in_webpage
+{
 
-	public static void main(String[] args) throws MalformedURLException, IOException {
-		WebDriverManager.chromedriver().setup();
+	public static void main(String[] args) throws MalformedURLException, IOException 
+	{
+		System.setProperty("Webdriver.chrome.driver", "E://Rahul Shetty Course//Assignment//WebDrivers//chromedriver.exe");
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("Headless");
 		WebDriver driver = new ChromeDriver(options);
