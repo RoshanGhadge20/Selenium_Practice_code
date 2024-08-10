@@ -1,3 +1,4 @@
+
 import java.util.List;
 import java.util.Optional;
 
@@ -20,7 +21,7 @@ public class NetworkFailedRequest {
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 		// java.util.Optional<java.lang.String> urlPattern
-		Optional<List<org.openqa.selenium.devtools.v122.fetch.model.RequestPattern>> patterns = Optional.empty();
+		Optional<List> org.openqa.selenium.devtools.v122.fetch.model.RequestPattern>> patterns = Optional.empty();
 
 		devTools.send(Fetch.enable(patterns, Optional.empty()));
 

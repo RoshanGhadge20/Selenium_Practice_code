@@ -3,22 +3,21 @@ package Selenium_Each_Module_Code_Practice;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class Comparing_two_images {
-	public static void main(String[] args) throws IOException {
+public class Comparing_two_images 
+{
+	public static void main(String[] args) throws IOException 
+	{
 		// Setup WebDriver
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();

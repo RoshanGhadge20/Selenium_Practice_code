@@ -1,7 +1,6 @@
 package Selenium_Each_Module_Code_Practice;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -12,8 +11,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Complete_test_script {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");

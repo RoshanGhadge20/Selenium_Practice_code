@@ -1,51 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2024-06-29T17:01:28 IST" name="Default suite" finished-at="2024-06-29T17:01:56 IST" duration-ms="28657">
-    <groups>
-    </groups>
-    <test started-at="2024-06-29T17:01:28 IST" name="Default test" finished-at="2024-06-29T17:01:56 IST" duration-ms="28657">
-      <class name="Amazon_product_Purchase_Flow.amazon_product_buy">
-        <test-method is-config="true" signature="tear_up()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:28 IST" name="tear_up" finished-at="2024-06-29T17:01:35 IST" duration-ms="6976" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tear_up -->
-        <test-method signature="implement_wait()[pri:1, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:35 IST" name="implement_wait" finished-at="2024-06-29T17:01:35 IST" duration-ms="23" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- implement_wait -->
-        <test-method signature="Making_obj_of_utility()[pri:2, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:35 IST" name="Making_obj_of_utility" finished-at="2024-06-29T17:01:35 IST" duration-ms="34" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Making_obj_of_utility -->
-        <test-method signature="login_with_mobile_number()[pri:3, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:35 IST" name="login_with_mobile_number" finished-at="2024-06-29T17:01:36 IST" duration-ms="1362" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_with_mobile_number -->
-        <test-method signature="Verify_page_title()[pri:4, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:36 IST" name="Verify_page_title" finished-at="2024-06-29T17:01:40 IST" duration-ms="3623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_page_title -->
-        <test-method signature="Searching_product()[pri:5, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:40 IST" name="Searching_product" finished-at="2024-06-29T17:01:46 IST" duration-ms="6186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Searching_product -->
-        <test-method signature="Finding_list_of_prod()[pri:6, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:46 IST" name="Finding_list_of_prod" finished-at="2024-06-29T17:01:47 IST" duration-ms="1185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Finding_list_of_prod -->
-        <test-method signature="count_link()[pri:7, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:47 IST" name="count_link" finished-at="2024-06-29T17:01:47 IST" duration-ms="139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- count_link -->
-        <test-method signature="check_detail_screen()[pri:8, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:47 IST" name="check_detail_screen" finished-at="2024-06-29T17:01:52 IST" duration-ms="4439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check_detail_screen -->
-        <test-method signature="buy_now()[pri:9, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:52 IST" name="buy_now" finished-at="2024-06-29T17:01:56 IST" duration-ms="3969" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
+	<reporter-output>
+	</reporter-output>
+	<suite started-at="2024-06-29T17:01:28 IST" name="Default suite"
+		finished-at="2024-06-29T17:01:56 IST" duration-ms="28657">
+		<groups>
+		</groups>
+		<test started-at="2024-06-29T17:01:28 IST" name="Default test"
+			finished-at="2024-06-29T17:01:56 IST" duration-ms="28657">
+			<class name="Amazon_product_Purchase_Flow.amazon_product_buy">
+				<test-method is-config="true"
+					signature="tear_up()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:28 IST" name="tear_up"
+					finished-at="2024-06-29T17:01:35 IST" duration-ms="6976"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				tear_up -->
+				<test-method
+					signature="implement_wait()[pri:1, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:35 IST" name="implement_wait"
+					finished-at="2024-06-29T17:01:35 IST" duration-ms="23"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				implement_wait -->
+				<test-method
+					signature="Making_obj_of_utility()[pri:2, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:35 IST"
+					name="Making_obj_of_utility"
+					finished-at="2024-06-29T17:01:35 IST" duration-ms="34"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				Making_obj_of_utility -->
+				<test-method
+					signature="login_with_mobile_number()[pri:3, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:35 IST"
+					name="login_with_mobile_number"
+					finished-at="2024-06-29T17:01:36 IST" duration-ms="1362"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				login_with_mobile_number -->
+				<test-method
+					signature="Verify_page_title()[pri:4, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:36 IST"
+					name="Verify_page_title"
+					finished-at="2024-06-29T17:01:40 IST" duration-ms="3623"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				Verify_page_title -->
+				<test-method
+					signature="Searching_product()[pri:5, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:40 IST"
+					name="Searching_product"
+					finished-at="2024-06-29T17:01:46 IST" duration-ms="6186"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				Searching_product -->
+				<test-method
+					signature="Finding_list_of_prod()[pri:6, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:46 IST"
+					name="Finding_list_of_prod"
+					finished-at="2024-06-29T17:01:47 IST" duration-ms="1185"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				Finding_list_of_prod -->
+				<test-method
+					signature="count_link()[pri:7, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:47 IST" name="count_link"
+					finished-at="2024-06-29T17:01:47 IST" duration-ms="139"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				count_link -->
+				<test-method
+					signature="check_detail_screen()[pri:8, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:47 IST"
+					name="check_detail_screen"
+					finished-at="2024-06-29T17:01:52 IST" duration-ms="4439"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				check_detail_screen -->
+				<test-method
+					signature="buy_now()[pri:9, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:52 IST" name="buy_now"
+					finished-at="2024-06-29T17:01:56 IST" duration-ms="3969"
+					status="FAIL">
+					<exception class="org.openqa.selenium.NoSuchWindowException">
+						<message>
               <![CDATA[no such window
   (Session info: chrome=126.0.6478.127)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
@@ -55,7 +112,7 @@ Command: [4de183e0cfda11c65b8eac235bc5aa43, switchToWindow {handle=F8ECA481E5F89
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50110}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50110/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 4de183e0cfda11c65b8eac235bc5aa43]]>
             </message>
-            <full-stacktrace>
+						<full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window
   (Session info: chrome=126.0.6478.127)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
@@ -104,15 +161,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buy_now -->
-        <test-method is-config="true" signature="Tear_down()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]" started-at="2024-06-29T17:01:56 IST" name="Tear_down" finished-at="2024-06-29T17:01:56 IST" duration-ms="623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tear_down -->
-      </class> <!-- Amazon_product_Purchase_Flow.amazon_product_buy -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+					</exception> <!--
+					org.openqa.selenium.NoSuchWindowException -->
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				buy_now -->
+				<test-method is-config="true"
+					signature="Tear_down()[pri:0, instance:Amazon_product_Purchase_Flow.amazon_product_buy@3ecd267f]"
+					started-at="2024-06-29T17:01:56 IST" name="Tear_down"
+					finished-at="2024-06-29T17:01:56 IST" duration-ms="623"
+					status="PASS">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!--
+				Tear_down -->
+			</class> <!--
+			Amazon_product_Purchase_Flow.amazon_product_buy -->
+		</test> <!--
+		Default test -->
+	</suite> <!--
+	Default suite -->
 </testng-results>

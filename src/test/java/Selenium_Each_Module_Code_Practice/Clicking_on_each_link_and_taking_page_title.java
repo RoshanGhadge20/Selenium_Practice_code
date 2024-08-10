@@ -2,7 +2,6 @@ package Selenium_Each_Module_Code_Practice;
 
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -22,8 +21,8 @@ public class Clicking_on_each_link_and_taking_page_title
 			driver.get("https://testautomationpractice.blogspot.com/");
 			
 			//To get total number of links present in webpage
-			int no_of_linkscount=driver.findElements(By.tagName("a")).size();
-			System.out.println("Total No of links persent in webpage :- "+no_of_linkscount);
+			int countlinks=driver.findElements(By.tagName("a")).size();
+			System.out.println("Total No of links persent in webpage :- "+countlinks);
 			
 			//To get all the links present in webpage
 			/*
@@ -32,7 +31,7 @@ public class Clicking_on_each_link_and_taking_page_title
 			 * link.sendKeys(clik_on_link); }
 			 */
 			
-			for(int i=1;i<no_of_linkscount;i++)
+			for(int i=1;i<countlinks;i++)
 			{
 				String click_on_link=Keys.chord(Keys.CONTROL, Keys.ENTER);
 				driver.findElements(By.tagName("a")).get(i).sendKeys(click_on_link);
@@ -41,14 +40,14 @@ public class Clicking_on_each_link_and_taking_page_title
 			}
 			
 			//To get the title of each page window
-			driver.switchTo().defaultContent();
+			driver.switchTo().defaultContent(); // helpful for switching to parent window
+			//To iterate over each window
 			Set<String> windows=driver.getWindowHandles();
 			Iterator<String> it=windows.iterator();
 			while(it.hasNext())
 			{
 				driver.switchTo().window(it.next());
 				System.out.println("Paget Title:- "+ driver.getTitle());
-				
 			}
 			driver.quit();
 			System.out.println("End of program Executions");

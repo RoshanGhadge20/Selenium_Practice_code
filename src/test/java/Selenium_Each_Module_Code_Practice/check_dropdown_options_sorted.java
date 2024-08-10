@@ -15,7 +15,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class check_dropdown_options_sorted {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
@@ -28,10 +27,12 @@ public class check_dropdown_options_sorted {
 		List<String> tempList=new ArrayList<>();
 		
 		List<WebElement> options=se.getOptions();
+		System.out.println("Drop-down menu options are :- ");
 		for(WebElement e:options)
 		{
 			originalList.add(e.getText());
 			tempList.add(e.getText());
+			System.out.println(e.getText());
 		}
 		
 		Collections.sort(tempList);
@@ -43,9 +44,7 @@ public class check_dropdown_options_sorted {
 			System.out.println("Options are not sorted in order");
 		}
 		
-		
 		driver.close();
 		System.out.println("End of program execution");
 	}
-
 }
