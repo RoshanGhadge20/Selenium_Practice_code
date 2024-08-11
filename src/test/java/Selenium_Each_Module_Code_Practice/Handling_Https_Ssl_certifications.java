@@ -4,12 +4,10 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Handling_Https_Ssl_certifications
 {
-
 	public static void main(String[] args) 
 	{
 		/*
@@ -17,11 +15,13 @@ public class Handling_Https_Ssl_certifications
 		 * not secure then also we can access that website through the selenium in our
 		 * browser window
 		 */
-		ChromeOptions opt=new ChromeOptions();
-		opt.setAcceptInsecureCerts(true);
+		ChromeOptions options=new ChromeOptions();
+		options.setAcceptInsecureCerts(true);
+		options.addArguments("--start-maximized");
+		options.addArguments("Headless");
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(opt);
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
 		

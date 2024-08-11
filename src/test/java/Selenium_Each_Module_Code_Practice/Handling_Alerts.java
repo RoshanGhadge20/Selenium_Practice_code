@@ -7,8 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Handling_Alerts  {
-	public static void main(String[] args) throws InterruptedException {
+public class Handling_Alerts  
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -24,7 +26,8 @@ public class Handling_Alerts  {
 		
 		//Handling windows alerts 
 		Alert  alert=driver.switchTo().alert();
-		alert.accept(); // To accept the alert with msg box => 'OK' 
+		alert.accept(); // To accept the alert with msg box => 'OK'
+		
 		/*
 		 *alert.dismiss() // To dismiss the alert box with => 'Cancel' 
 		 *alert.sendkeys() // To send the any text/value within the alert box 	

@@ -23,6 +23,7 @@ public class Microsoft_Edge_driver {
 		WebDriver driver=new EdgeDriver();
 		
 		driver.get("https://www.browserstack.com/guide/launch-edge-browser-in-selenium");
+		
 		driver.quit();
 		System.out.println("End of program code execution");
 	}
