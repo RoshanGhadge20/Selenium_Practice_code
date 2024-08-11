@@ -2,7 +2,6 @@ package Selenium_Each_Module_Code_Practice;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +19,7 @@ public class Practice_set_of_streams_into_automation
         
         driver.get("https://testautomationpractice.blogspot.com/");
         
-        // Use a more appropriate locator strategy
+        
         List<WebElement> elementslist = driver.findElements(By.xpath("//select[@id='country']"));
         
         // Debug: Print fetched elements

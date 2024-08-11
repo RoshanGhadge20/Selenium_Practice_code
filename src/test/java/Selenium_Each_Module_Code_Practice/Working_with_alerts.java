@@ -3,20 +3,20 @@ package Selenium_Each_Module_Code_Practice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Working_with_alerts {
-	public static void main(String[] args) throws InterruptedException {
+public class Working_with_alerts
+{
+	public static void main(String[] args) throws InterruptedException
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		handling_alerts(driver);
 		
-		driver.close();
+		driver.quit();
 		System.out.println("End of program execution");
-		
 		
 	}
 

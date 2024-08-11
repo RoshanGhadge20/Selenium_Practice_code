@@ -17,9 +17,6 @@ public class Working_with_ActionClass {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
-
-		
-		// Working with Drag and Drop 
 		
 		try {
 			// Working with Action class

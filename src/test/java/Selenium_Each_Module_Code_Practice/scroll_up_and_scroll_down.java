@@ -1,10 +1,8 @@
 package Selenium_Each_Module_Code_Practice;
 
-import java.time.chrono.ThaiBuddhistEra;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class scroll_up_and_scroll_down

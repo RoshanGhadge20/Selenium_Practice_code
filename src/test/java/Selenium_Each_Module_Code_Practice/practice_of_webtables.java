@@ -1,11 +1,9 @@
 package Selenium_Each_Module_Code_Practice;
 
 import java.util.Iterator;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class practice_of_webtables {
@@ -30,16 +28,22 @@ public static void main(String[] args) {
 	 * 
 	 */
 	
-	 for (int j = 1; j <= col_count; j++) {
+	 for (int j = 1; j <= col_count; j++) 
+	 {
          System.out.print(driver.findElement(By.xpath("//table[@name='BookTable']/tbody/tr[1]/th[" + j + "]")).getText() + "\t");
+         System.out.print("\t");
      }
      System.out.println();
      
      // Print the data rows
-     for (int i = 2; i <= row_count; i++) {
-         for (int j = 1; j <= col_count; j++) {
+     for (int i = 2; i <= row_count; i++) 
+     {
+         for (int j = 1; j <= col_count; j++) 
+         {
              System.out.print(driver.findElement(By.xpath("//table[@name='BookTable']/tbody/tr[" + i + "]/td[" + j + "]")).getText() + "\t");
+             System.out.print("\t");
          }
+         
          System.out.println();
      }
      
