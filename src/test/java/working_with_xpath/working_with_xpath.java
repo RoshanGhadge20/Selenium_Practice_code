@@ -6,9 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class work_with_xpath {
-	public static void main(String[] args) {
-
+public class working_with_xpath 
+{
+	public static void main(String[] args)
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 
@@ -22,20 +23,20 @@ public class work_with_xpath {
 		driver.findElement(By.partialLinkText("New Browser")).click();
 		driver.findElement(By.linkText("New Browser Window")).click();
 		driver.findElement(By.tagName("input")).click();
+		
 
 		// Working with types xpaths -> Absolute
 		/*
-		 * 1. Absolute xpath 2. Relative xpath
+		 * 1. Absolute xpath 
+		 * 2. Relative xpath
 		 * 
 		 * driver.findElement(By.xpath("//tagname[@attribute='value']));
 		 * driver.findElement(By.xpath("Abosulte xpath")
-		 * 
-		 * 
-		 * 
+		 *
 		 */
+		
 		driver.close();
 		System.out.println("End of program code");
-
 	}
 
 }
