@@ -5,16 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.logging.NeedsLocalLogs;
 
-public class Working_with_checkboxes {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+public class Working_with_checkboxes 
+{
+	public static void main(String[] args) 
+	{
 		System.setProperty("Webdriver.chrome.driver",
 				"E://Rahul Shetty Course//Assignment//WebDrivers//chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
+		click_checkbox(driver);
 		driver.close();
 		System.out.println("End of Program Execution");
 		
@@ -27,7 +27,6 @@ public class Working_with_checkboxes {
 		 * 
 		 */	
 	}
-	
 	
 	public static void click_checkbox(WebDriver driver)
 	{

@@ -1,9 +1,7 @@
 package Selenium_Each_Module_Code_Practice;
-
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,10 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Working_with_calender {
-
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -31,7 +26,7 @@ public class Working_with_calender {
 		driver.findElement(By.xpath("//button[@data-testid='uitk-date-selector-input1-default']")).click();
 		driver.findElement(By.xpath("//div[@aria-lable='Monday, June 3, 2024, Selected start date']")).click();
 		driver.findElement(By.xpath("//button[@data-stid='apply-date-selector']"));
-		
+
 		driver.close();
 		System.out.println("End of Program Code");
 

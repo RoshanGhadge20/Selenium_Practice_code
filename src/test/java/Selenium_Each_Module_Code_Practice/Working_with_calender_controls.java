@@ -12,7 +12,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Working_with_calender_controls 
 {
-
 	public static void main(String[] args) throws InterruptedException 
 	{
         String expectedFromDateStr = "01/20/2020";
@@ -21,11 +20,11 @@ public class Working_with_calender_controls
         String expectedToDate = "26";
         String testUrl = "https://jqueryui.com/datepicker/#date-range";
 
-        /*System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-*/
+        /*
+         * System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--start-maximized");
+     	*/
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

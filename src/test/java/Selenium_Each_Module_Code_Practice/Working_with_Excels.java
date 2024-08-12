@@ -3,7 +3,6 @@ package Selenium_Each_Module_Code_Practice;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
-
 import org.apache.commons.collections4.functors.WhileClosure;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -12,9 +11,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Working_wth_Excels {
-	public static void main(String[] args) throws IOException {
-
+public class Working_with_Excels 
+{
+	public static void main(String[] args) throws IOException 
+	{
 
 		/**
 		 * The Working_wth_Excels class demonstrates how to work with Excel files
@@ -107,7 +107,9 @@ public class Working_wth_Excels {
 		/*
 		 * XSSFCell cell=row.getCell(0); System.out.println("First Cell Value:- "+
 		 * cell);
+		 * 
 		 */
+		
 		DataFormatter formatter=new DataFormatter();
 		Iterator<Row> rowsIterator=sheet.iterator();
 		while (rowsIterator.hasNext())
@@ -122,8 +124,6 @@ public class Working_wth_Excels {
 			}
 			System.out.println("");
 		}
-
-
 
 	}
 }

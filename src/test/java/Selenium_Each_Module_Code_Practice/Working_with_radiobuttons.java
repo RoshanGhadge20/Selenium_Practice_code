@@ -6,10 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Working_with_radiobuttons {
+public class Working_with_radiobuttons 
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		
@@ -18,9 +19,9 @@ public class Working_with_radiobuttons {
 		//Working with radio buttons in page 
 		
 		radio_buttons(driver);
-		System.out.println("End of program execution");
-		driver.close();
 		
+		driver.close();
+		System.out.println("End of program execution");
 		
 	}
 	
