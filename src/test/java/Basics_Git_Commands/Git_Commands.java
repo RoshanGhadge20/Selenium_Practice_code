@@ -1,7 +1,9 @@
 package Basics_Git_Commands;
 
-public class Git_Commands {
-	public static void main(String[] args) {
+public class Git_Commands 
+{
+	public static void main(String[] args)
+	{
 		
 	/*	//Basiscs of git commands 
 		1. git init
@@ -16,9 +18,9 @@ public class Git_Commands {
 		//git commands related to branching
 		1. git branch
 		2. git checkout -b "Branch name"
-		3. git checkbout -d "Branchname"
-		4. git merge "branchname"
-		5. git checkout "Branchname"
+		3. git checkbout -d "Branch name"
+		4. git merge "branch name"
+		5. git checkout "Branch name"
 		*/
 	}
 

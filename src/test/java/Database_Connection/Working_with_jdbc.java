@@ -6,14 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 public class Working_with_jdbc 
 {
 
 	public static void main(String[] args) throws SQLException 
 	{
-		// TODO Auto-generated method stub	
-
 		/** 
 		 * Syntax for jdbc connection
 		 * 

@@ -10,10 +10,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FindBy_practice 
 {
-
 	public static void main(String[] args) 
 	{
-
 		WebDriverManager.chromedriver().setup();
 		
 		//Here we are defining the behaviour of chromebrowser
@@ -43,9 +41,6 @@ public class FindBy_practice
 
 	}
 
-	private static void quit() {
-		// TODO Auto-generated method stub
-
-	}
+	private static void quit() {}
 
 }
