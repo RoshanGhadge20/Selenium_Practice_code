@@ -13,7 +13,8 @@ public class FindBy_Element
 	WebElement emailElement;
 	WebDriver driver;
 
-	public FindBy_Element(WebDriver driver) {
+	public FindBy_Element(WebDriver driver) 
+	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
