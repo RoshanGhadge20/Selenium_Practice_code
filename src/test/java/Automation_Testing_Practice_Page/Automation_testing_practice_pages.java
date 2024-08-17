@@ -18,50 +18,51 @@ public class Automation_testing_practice_pages
 
 	@FindBy(css = "input.form-control[id='name']")
 	WebElement namefield;
-	
+
 	@FindBy(css = "input.form-control[id=email")
 	WebElement emailfield;
-	
+
 	@FindBy(css = "input.form-control[id=phone")
 	WebElement phonefield;
-	
+
 	@FindBy(css = "textarea.form-control[id='textarea']")
 	WebElement addressfield;
-	
+
 	@FindBy(css = "input[id='male']")
 	WebElement genderfield;
-	
+
 	@FindBy(css = "input[id=sunday]")
 	WebElement dayfield;
-	
+
 	@FindBy(css="select[id='country']")
 	WebElement drpdwnfield;
-	
+
 	@FindBy(css = "select.form-control[id='colors'] option")
 	List<WebElement> colors;
-	
+
 	//List<WebElement> colors=driver.findElements(By.cssSelector("select.form-control[id='colors'] option"));
-	
+
 	@FindBy(css = "input#datepicker")
 	WebElement datepicker;
-	
+
 	@FindBy(xpath = "//a[normalize-space()='16'][1]")
 	WebElement today_date;
-	
+
 	@FindBy(css = "table[name='BookTable'] tbody tr th")
 	List<WebElement> table_heding;
-	
+
 	@FindBy(css = "table[name='BookTable'] tbody tr td")
 	List<WebElement> table_data;
-	
-	
-	
-	
-	
-	
-	
 
-Automation_testing_practice_pages(WebDriver driver)
+	@FindBy(css = ".pagination[id='pagination'] li")
+	List<WebElement> pagination_count;
+	
+	@FindBy(css = "table[id='productTable'] tbody tr")
+	List<WebElement> page_data;
+
+
+
+	Automation_testing_practice_pages(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -76,7 +77,7 @@ Automation_testing_practice_pages(WebDriver driver)
 		genderfield.click();
 		dayfield.click();
 	}
-	
+
 	public void select_country() 
 	{
 		Select sc=new Select(drpdwnfield);
@@ -88,33 +89,33 @@ Automation_testing_practice_pages(WebDriver driver)
 				option.click();
 			}
 		}
-		
+
 	}
-	
+
 	public void fetch_colors()
 	{
-		  Iterator<WebElement> it=colors.iterator();
-		  while(it.hasNext())
-		  {
-			  System.out.println((it.next()).getText());
-		  }
+		Iterator<WebElement> it=colors.iterator();
+		while(it.hasNext())
+		{
+			System.out.println((it.next()).getText());
+		}
 	}
-	
+
 	public void today_date_pick() throws InterruptedException
 	{
 		datepicker.click();
 		Thread.sleep(2000);
 		today_date.click();
 	}
-	
+
 	public void table_heading()
 	{
 		Iterator<WebElement> th=table_heding.iterator();
-		  while(th.hasNext())
-		  {
-			  System.out.print(((th.next()).getText())+" ");
-		  }
-		  System.out.println();
+		while(th.hasNext())
+		{
+			System.out.print(((th.next()).getText())+" ");
+		}
+		System.out.println();
 	}
 	public void table_data()
 	{
@@ -123,14 +124,26 @@ Automation_testing_practice_pages(WebDriver driver)
 		{
 			System.out.print(((td.next()).getText())+" ");
 			System.out.println("");
-			
+
 		}
 		//System.out.println(" ");
 	}
 
+	public void pagination_table()
+	{
+		for(int i=0;i<pagination_count.size();i++)
+		{
+			System.out.println("---- Printing page "+ i+1 + "data ----");
+			Iterator<WebElement> pd=page_data.iterator();
+			while (pd.hasNext()) 
+			{
+				System.out.println((pd.next()).getText());
+			}
+			pagination_count.get(i).click();
+		}
+	}
 
-	
-	
-	
-	
+
+
+
 }

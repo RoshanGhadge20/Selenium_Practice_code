@@ -41,10 +41,15 @@ public class Practice_of_each_section_of_page
 		driver.navigate().back();
 		
 		//Working with webtables 
-		System.out.println("-------Printing WebTableTable Data-------");
-		obj.table_heading();
-		obj.table_data();
+		/*
+		 * System.out.println("-------Printing WebTableTable Data-------");
+		 * obj.table_heading(); 
+		 * obj.table_data();
+		 */
 		
+		// Working with pagination concepts 
+		System.out.println("---- working with pagination table -----");
+		obj.pagination_table();
 		
 
 
