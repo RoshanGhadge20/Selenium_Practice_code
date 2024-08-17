@@ -51,9 +51,16 @@ public class Practice_of_each_section_of_page
 		System.out.println("---- working with pagination table -----");
 		obj.pagination_table();
 		
-
-
-
+		// Working with tabs 
+		System.out.println("--- Working with tabs ----");
+		obj.search_field_tab();
+		
+		// Working with new browser windows
+		System.out.println(" --- Working with new browser window ---");
+		obj.browser_window();
+		
+		
+		
 
 
 		driver.quit();

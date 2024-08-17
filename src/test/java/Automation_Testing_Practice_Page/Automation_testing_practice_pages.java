@@ -2,8 +2,8 @@ package Automation_Testing_Practice_Page;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -56,9 +56,18 @@ public class Automation_testing_practice_pages
 
 	@FindBy(css = ".pagination[id='pagination'] li")
 	List<WebElement> pagination_count;
-	
+
 	@FindBy(css = "table[id='productTable'] tbody tr")
 	List<WebElement> page_data;
+
+	@FindBy(css = "*[id='Wikipedia1_wikipedia-search-input']")
+	WebElement search_tab_field;
+
+	@FindBy(css = "*[id='Wikipedia1_wikipedia-search-results'] div")
+	List<WebElement> search_result;
+
+	@FindBy(xpath = "//button[normalize-space()='New Browser Window']")
+	WebElement new_browser_button;
 
 
 
@@ -141,6 +150,36 @@ public class Automation_testing_practice_pages
 			}
 			pagination_count.get(i).click();
 		}
+	}
+
+	public void search_field_tab() 
+	{
+		search_tab_field.sendKeys("demo");
+		System.out.println("Printing all search results");
+
+		Iterator<WebElement> sr= search_result.iterator();
+		while (sr.hasNext()) 
+		{
+			System.out.println((sr.next()).getText());
+
+		}
+
+	}
+
+	public void browser_window() 
+	{
+		String main_win=driver.getWindowHandle(); 
+		new_browser_button.click();
+		Set<String> win_hand=driver.getWindowHandles();
+		System.out.println("Total Number of windows opened into browser are "+ win_hand.size());
+		Iterator<String> wh=win_hand.iterator();
+		while (wh.hasNext())
+		{
+			byte[]  win_title = (wh.next()).getBytes();
+			System.out.println("Window :- "+ win_hand.toString());
+
+		}
+		driver.switchTo().window(main_win);
 	}
 
 
