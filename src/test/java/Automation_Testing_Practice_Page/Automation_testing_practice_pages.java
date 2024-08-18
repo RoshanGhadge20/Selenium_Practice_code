@@ -78,11 +78,17 @@ public class Automation_testing_practice_pages
 	@FindBy(xpath = "//button[normalize-space()='Prompt']")
 	WebElement prompt_btn;
 	
-	@FindBy(xpath = "*[ondblclick='myFunction1()']")
+	@FindBy(xpath = "//button[normalize-space()='Copy Text']")
 	WebElement double_click_btn;
 	
-	@FindBy(xpath = "input[id='field2']")
+	@FindBy(css = "input[id='field2']")
 	WebElement verify_txt_field;
+	
+	@FindBy(css = "*[id='draggable']")
+	WebElement draggable_field;
+	
+	@FindBy(css = "*[id='droppable']")
+	WebElement droppable_field;
 	
 	
 
@@ -216,6 +222,8 @@ public class Automation_testing_practice_pages
 		System.out.println("Prompt alert msg" +prompt_msg);
 		
 	}
+	
+	
 
 
 
