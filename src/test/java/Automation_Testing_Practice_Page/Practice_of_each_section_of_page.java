@@ -4,8 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.reactivex.rxjava3.functions.Action;
 
 public class Practice_of_each_section_of_page 
 {
@@ -17,6 +19,9 @@ public class Practice_of_each_section_of_page
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
+		
+		Actions act=new Actions(driver);
+		
 
 		Automation_testing_practice_pages obj=new Automation_testing_practice_pages(driver);
 
@@ -59,7 +64,14 @@ public class Practice_of_each_section_of_page
 		System.out.println(" --- Working with new browser window ---");
 		obj.browser_window();
 		
+		//Working with JS Windows 
+		System.out.println(" ---- Working with JS Windows ---- ");
+		obj.alert_window();
 		
+		//Performing Double click 
+		System.out.println("---- Performing Double Click ---- ");
+		act.doubleClick(obj.double_click_btn);
+		System.out.println("button text"+(obj.verify_txt_field).getText());
 		
 
 

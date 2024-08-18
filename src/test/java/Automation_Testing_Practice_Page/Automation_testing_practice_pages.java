@@ -68,6 +68,23 @@ public class Automation_testing_practice_pages
 
 	@FindBy(xpath = "//button[normalize-space()='New Browser Window']")
 	WebElement new_browser_button;
+	
+	@FindBy(xpath = "//button[normalize-space()='Alert']")
+	WebElement alert_btn;
+	
+	@FindBy(xpath = "//button[normalize-space()='Confirm Box']")
+	WebElement conf_alert_btn;
+	
+	@FindBy(xpath = "//button[normalize-space()='Prompt']")
+	WebElement prompt_btn;
+	
+	@FindBy(xpath = "*[ondblclick='myFunction1()']")
+	WebElement double_click_btn;
+	
+	@FindBy(xpath = "input[id='field2']")
+	WebElement verify_txt_field;
+	
+	
 
 
 
@@ -180,6 +197,24 @@ public class Automation_testing_practice_pages
 
 		}
 		driver.switchTo().window(main_win);
+	}
+	
+	public void alert_window()
+	{
+		alert_btn.click();
+		driver.switchTo().alert().accept();
+		
+		conf_alert_btn.click();
+		String conf_alert_msg=driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		System.out.println("Confirmation alert msg" +conf_alert_msg);
+		
+		prompt_btn.click();
+		String prompt_msg=driver.switchTo().alert().getText();
+		driver.switchTo().alert().sendKeys("Roshan Ghadge");
+		driver.switchTo().alert().accept();
+		System.out.println("Prompt alert msg" +prompt_msg);
+		
 	}
 
 
