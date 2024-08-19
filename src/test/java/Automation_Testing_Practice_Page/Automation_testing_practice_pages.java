@@ -90,10 +90,6 @@ public class Automation_testing_practice_pages
 	@FindBy(css = "*[id='droppable']")
 	WebElement droppable_field;
 	
-	
-
-
-
 	Automation_testing_practice_pages(WebDriver driver)
 	{
 		this.driver=driver;
@@ -214,7 +210,6 @@ public class Automation_testing_practice_pages
 		String conf_alert_msg=driver.switchTo().alert().getText();
 		driver.switchTo().alert().accept();
 		System.out.println("Confirmation alert msg" +conf_alert_msg);
-		
 		prompt_btn.click();
 		String prompt_msg=driver.switchTo().alert().getText();
 		driver.switchTo().alert().sendKeys("Roshan Ghadge");
@@ -224,8 +219,5 @@ public class Automation_testing_practice_pages
 	}
 	
 	
-
-
-
 
 }
