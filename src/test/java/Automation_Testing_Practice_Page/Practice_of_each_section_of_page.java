@@ -75,7 +75,10 @@ public class Practice_of_each_section_of_page {
 		System.out.println("Performing Drag & Drop Operation");
 		act.dragAndDrop(obj.draggable_field, obj.droppable_field).build().perform();
 
-
+		//Working with Slider
+		System.out.println("--- Working with JS Slider ---");
+		act.dragAndDropBy(obj.slider, 50, 0);
+		
 
 		driver.quit();
 		System.out.println("End of program code execution");

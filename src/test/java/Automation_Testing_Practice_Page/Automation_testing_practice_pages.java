@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -89,6 +90,12 @@ public class Automation_testing_practice_pages
 	
 	@FindBy(css = "*[id='droppable']")
 	WebElement droppable_field;
+	
+	@FindBy(css = ".ui-slider-handle")
+	WebElement slider;
+	
+	
+	
 	
 	Automation_testing_practice_pages(WebDriver driver)
 	{
@@ -218,6 +225,4 @@ public class Automation_testing_practice_pages
 		
 	}
 	
-	
-
 }
