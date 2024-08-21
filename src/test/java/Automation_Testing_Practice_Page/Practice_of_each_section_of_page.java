@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.reactivex.rxjava3.functions.Action;
 
 public class Practice_of_each_section_of_page {
 	public static void main(String[] args) throws InterruptedException {
@@ -78,6 +77,19 @@ public class Practice_of_each_section_of_page {
 		//Working with Slider
 		System.out.println("--- Working with JS Slider ---");
 		act.dragAndDropBy(obj.slider, 50, 0);
+		
+		//Working with Frames
+		/*
+		 * WebElement frame_id=driver.findElement(By.id("frame-one796456169"));
+		 * driver.switchTo().frame(frame_id);
+		 */
+		System.out.println("Working with frames");
+		obj.working_with_frames();
+		
+		
+		
+			
+		
 		
 
 		driver.quit();

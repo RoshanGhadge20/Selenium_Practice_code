@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -93,6 +93,27 @@ public class Automation_testing_practice_pages
 	
 	@FindBy(css = ".ui-slider-handle")
 	WebElement slider;
+	
+	// WebElements inside frames
+	
+	@FindBy(css = "input[name='RESULT_TextField-0']")
+	WebElement nameElement;
+	
+	@FindBy(css = "input[id='RESULT_RadioButton-1_0']")
+	WebElement genderElement;
+	
+	@FindBy(css = "input[name='RESULT_TextField-2']")
+	WebElement dobElement;
+	
+	@FindBy(css = "select[name='RESULT_RadioButton-3']")
+	WebElement dropdownlement;
+	
+	@FindBy(css = "input[name='Submit']")
+	WebElement submitElement;
+	
+	
+	
+	
 	
 	
 	
@@ -225,4 +246,29 @@ public class Automation_testing_practice_pages
 		
 	}
 	
-}
+	public void working_with_frames() 
+	{
+		driver.switchTo().frame("frame-one796456169");
+		nameElement.sendKeys("RG");
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", genderElement);
+		dobElement.sendKeys("20/11/2000");
+		System.out.println("Printing all select dropdown options from frame");
+		Select scobj=new Select(dropdownlement);
+		List<WebElement> options=scobj.getOptions();
+		for(WebElement opt:options)
+		{
+			System.out.println(opt.getText());
+			if((opt.getText().equals("QA Engineer")))
+			{
+				opt.click();
+			}
+		}
+		
+		submitElement.click();
+
+	}
+
+	
+	}
+	
+
