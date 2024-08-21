@@ -85,11 +85,12 @@ public class Practice_of_each_section_of_page {
 		 */
 		System.out.println("Working with frames");
 		obj.working_with_frames();
+		driver.switchTo().defaultContent();
 		
 		
-		
-			
-		
+		// Working with resizable 
+		System.out.println("Working with resizable");
+		act.clickAndHold(obj.resizable).moveByOffset(20, 10).release().build().perform();
 		
 
 		driver.quit();

@@ -114,8 +114,10 @@ public class Automation_testing_practice_pages
 	
 	
 	
+	// Default frame contnet
 	
-	
+	@FindBy(css = ".ui-icon-gripsmall-diagonal-se")
+	WebElement resizable;
 	
 	
 	Automation_testing_practice_pages(WebDriver driver)
@@ -263,10 +265,12 @@ public class Automation_testing_practice_pages
 				opt.click();
 			}
 		}
-		
 		submitElement.click();
-
+		
 	}
+	
+	
+	
 
 	
 	}
