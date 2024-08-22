@@ -14,9 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 public class Automation_testing_practice_pages 
 {
 	WebDriver driver;
-
-	//Locating all the elements
-
+	
 	@FindBy(css = "input.form-control[id='name']")
 	WebElement namefield;
 
@@ -40,8 +38,6 @@ public class Automation_testing_practice_pages
 
 	@FindBy(css = "select.form-control[id='colors'] option")
 	List<WebElement> colors;
-
-	//List<WebElement> colors=driver.findElements(By.cssSelector("select.form-control[id='colors'] option"));
 
 	@FindBy(css = "input#datepicker")
 	WebElement datepicker;
@@ -94,7 +90,10 @@ public class Automation_testing_practice_pages
 	@FindBy(css = ".ui-slider-handle")
 	WebElement slider;
 	
-	// WebElements inside frames
+	@FindBy(css = ".ui-icon-gripsmall-diagonal-se")
+	WebElement resizable;
+	
+	//All  WebElements inside frames
 	
 	@FindBy(css = "input[name='RESULT_TextField-0']")
 	WebElement nameElement;
@@ -111,14 +110,7 @@ public class Automation_testing_practice_pages
 	@FindBy(css = "input[name='Submit']")
 	WebElement submitElement;
 	
-	
-	
-	
-	// Default frame contnet
-	
-	@FindBy(css = ".ui-icon-gripsmall-diagonal-se")
-	WebElement resizable;
-	
+
 	
 	Automation_testing_practice_pages(WebDriver driver)
 	{
@@ -268,11 +260,5 @@ public class Automation_testing_practice_pages
 		submitElement.click();
 		
 	}
-	
-	
-	
 
-	
-	}
-	
-
+}
