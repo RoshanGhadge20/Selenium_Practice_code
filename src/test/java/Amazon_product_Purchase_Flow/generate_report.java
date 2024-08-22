@@ -1,9 +1,8 @@
 package Amazon_product_Purchase_Flow;
 
+import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-
-import junit.framework.Assert;
 
 public class generate_report
 {

@@ -6,12 +6,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
-public class SetGeoLocation {
+public class SetGeoLocation 
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) 
+	{
 
-		
 	System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 		
 		ChromeDriver driver = new ChromeDriver();
@@ -32,14 +32,7 @@ public class SetGeoLocation {
 		driver.findElements(By.cssSelector(".LC20lb")).get(0).click();
 		String title =driver.findElement(By.cssSelector(".our-story-card-title")).getText();
 		System.out.println(title);
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }

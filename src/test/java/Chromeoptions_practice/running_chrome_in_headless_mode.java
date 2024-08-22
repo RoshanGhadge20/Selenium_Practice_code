@@ -24,6 +24,6 @@ public class running_chrome_in_headless_mode
 
 		driver.quit();
 		System.out.println("End of program code");
-		
 		}
+	
 }

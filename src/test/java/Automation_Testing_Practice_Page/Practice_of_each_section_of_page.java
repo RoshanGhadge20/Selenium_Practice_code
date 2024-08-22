@@ -94,7 +94,6 @@ public class Practice_of_each_section_of_page
 		//System.out.println("Working with resizable");
 		act.clickAndHold(obj.resizable).moveByOffset(20, 10).release().build().perform();
 		
-
 		driver.quit();
 		System.out.println("End of program code execution");
 

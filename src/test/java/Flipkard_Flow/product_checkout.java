@@ -8,8 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class product_checkout {
-	public static void main(String[] args) throws InterruptedException {
+public class product_checkout 
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -37,7 +39,9 @@ public class product_checkout {
 		driver.findElement(By.xpath("//span[contains(text(),'Place Order')]")).click();
 
 		driver.quit();
+		
 		System.out.println("End of program execution");
+		
 	}
 
 }

@@ -46,9 +46,7 @@ public class Working_with_jdbc
 		con.close();
 		System.out.println("End of program code execution");
 		
-		
 	}
-	
 
 }
 

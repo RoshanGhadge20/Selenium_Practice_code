@@ -22,8 +22,10 @@ import org.testng.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class Upload_and_download {
-	public static void main(String args[]) throws InterruptedException, IOException {
+public class Upload_and_download 
+{
+	public static void main(String args[]) throws InterruptedException, IOException
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -87,7 +89,8 @@ public class Upload_and_download {
 	}
 
 	public static void update_cell_Data(int row, int col, String updatedValue)
-	        throws FileNotFoundException, IOException, InterruptedException {
+	        throws FileNotFoundException, IOException, InterruptedException 
+	{
 	    FileInputStream fis = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
 	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
 	    XSSFSheet sheet = workbook.getSheet("Sheet1");
@@ -118,7 +121,8 @@ public class Upload_and_download {
 	    fis.close();
 	}
 
-	public static int col_num() throws FileNotFoundException, IOException {
+	public static int col_num() throws FileNotFoundException, IOException
+	{
 		FileInputStream fin = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
 		int column = 0;
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
@@ -149,7 +153,8 @@ public class Upload_and_download {
 
 	}
 
-	public static int row_number() throws FileNotFoundException, IOException {
+	public static int row_number() throws FileNotFoundException, IOException
+	{
 		FileInputStream fin = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");

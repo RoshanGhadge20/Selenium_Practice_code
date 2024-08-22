@@ -1,11 +1,9 @@
 package FindBy;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FindBy_practice 
@@ -13,12 +11,10 @@ public class FindBy_practice
 	public static void main(String[] args) 
 	{
 		WebDriverManager.chromedriver().setup();
-		
-		//Here we are defining the behaviour of chromebrowser
+	
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("Headless");
 		
-		//Creating object of webdriver
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		
@@ -40,7 +36,5 @@ public class FindBy_practice
 		System.out.println("Execution time into minutes:- " + total_time);
 
 	}
-
-	private static void quit() {}
 
 }

@@ -19,9 +19,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class UploadDownload_Rahul_Shetty_Code_Practice {
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+public class UploadDownload_Rahul_Shetty_Code_Practice 
+{
+	public static void main(String[] args) throws IOException 
+	{
+
 		String fruitName = "Apple";
 		String updatedValue = "603";
 		String fileName = "C://Users//Admin//Downloads//download.xlsx";
@@ -63,8 +65,9 @@ public class UploadDownload_Rahul_Shetty_Code_Practice {
 		System.out.println("End of program execution");
 	}
 
-	private static boolean updateCell(String fileName, int row, int col, String updatedValue) throws IOException {
-		// TODO Auto-generated method stub
+	private static boolean updateCell(String fileName, int row, int col, String updatedValue) throws IOException
+	{
+
 		ArrayList<String> a = new ArrayList<String>();
 		FileInputStream fis = new FileInputStream(fileName);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -77,10 +80,12 @@ public class UploadDownload_Rahul_Shetty_Code_Practice {
 		workbook.close();
 		fis.close();
 		return true;
+		
 	}
 
-	private static int getRowNumber(String fileName, String text) throws IOException {
-		// TODO Auto-generated method stub
+	private static int getRowNumber(String fileName, String text) throws IOException 
+	{
+
 		ArrayList<String> a = new ArrayList<String>();
 		FileInputStream fis = new FileInputStream(fileName);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -99,14 +104,15 @@ public class UploadDownload_Rahul_Shetty_Code_Practice {
 					System.out.println("row_index:"+rowIndex);
 				}
 			}
-			k++;
 			
+			k++;
 		}
 		return rowIndex;
 	}
 
-	private static int getColumnNumber(String fileName, String colName) throws IOException {
-        // TODO Auto-generated method stub
+	private static int getColumnNumber(String fileName, String colName) throws IOException 
+	{
+		
         ArrayList<String> a = new ArrayList<String>();
         FileInputStream fis = new FileInputStream(fileName);
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -126,7 +132,5 @@ public class UploadDownload_Rahul_Shetty_Code_Practice {
         }
         System.out.println(column);
         return column;
-       
-
 }
 }

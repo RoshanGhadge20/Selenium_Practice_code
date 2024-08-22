@@ -8,19 +8,16 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 
-public class ConsoleLogsCapture {
+public class ConsoleLogsCapture 
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		
+	public static void main(String[] args) 
+	{
 
 		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 		
 		ChromeDriver driver = new ChromeDriver();
-		
-		//listeners - OnTestFailure
-		
+
 		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
 		driver.findElement(By.linkText("Browse Products")).click();
 		driver.findElement(By.partialLinkText("Selenium")).click();
@@ -37,30 +34,7 @@ public class ConsoleLogsCapture {
 			 System.out.println(e.getMessage());  //Log4j
 			
 		 }
-		 
-		 
-		 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }

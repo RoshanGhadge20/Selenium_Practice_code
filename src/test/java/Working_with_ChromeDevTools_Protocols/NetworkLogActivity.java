@@ -9,20 +9,14 @@ import org.openqa.selenium.devtools.v122.fetch.model.AuthChallengeResponse.Respo
 import org.openqa.selenium.devtools.v122.network.Network;
 import org.openqa.selenium.devtools.v122.network.model.Request;
 import org.openqa.selenium.devtools.v122.network.Network;
-import org.openqa.selenium.devtools.v122.network.model.AuthChallengeResponse.Response;
 import org.openqa.selenium.devtools.v122.network.model.Request;
-
-
-
 public class NetworkLogActivity {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 		
 		ChromeDriver driver = new ChromeDriver();
-		//log file ->
 		
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
@@ -49,22 +43,14 @@ public class NetworkLogActivity {
 			{
 				System.out.println(res.getUrl()+"is failing with status code"+res.getStatus());
 			}
-			
-			
-			
+
 		});
 	
 		driver.get("https://rahulshettyacademy.com/angularAppdemo");
 	
 		
 		driver.findElement(By.cssSelector("button[routerlink*='library']")).click();
-		
-		
-		
-				
-				
-					
-		
+	
 	}
 
 }

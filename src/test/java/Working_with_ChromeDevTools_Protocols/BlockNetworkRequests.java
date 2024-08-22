@@ -9,19 +9,16 @@ import org.openqa.selenium.devtools.v122.network.Network;
 
 import com.google.common.collect.ImmutableList;
 
-public class BlockNetworkRequests {
+public class BlockNetworkRequests 
+{
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws InterruptedException 
+	{
 
-		//css , images
-		
+		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 
-System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
-		
 		ChromeDriver driver = new ChromeDriver();
-		//log file ->
-		
+
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -35,15 +32,6 @@ System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chro
 		long endTime = System.currentTimeMillis();
 		System.out.println(endTime - startTime);
 		//1793 2033
-		
-		
-		
-		 
-		
-		
-		
-		
-		
 	}
 
 }

@@ -29,15 +29,15 @@ public class selenium_grid
 		capability.setPlatform();
 		capability.setVersion()
 		capability.setCapability(,);
- 
+
 	 * -browser browserName=firefox,version=4,maxInstances=4,platform=WINDOWS
 	 * capability.setBrowserName(“firefox” );
-capability.setPlatform(“WINDOWS”);
-capability.setVersion(“4”);
+	   capability.setPlatform(“WINDOWS”);
+		capability.setVersion(“4”);
 	 * 
 	 * capability.setBrowserName(“firefox” );
-capability.setVersion(“4”);
+		capability.setVersion(“4”);
+	 * 	
 	 * 
-	 * 
-	*/	
+	 */	
 }

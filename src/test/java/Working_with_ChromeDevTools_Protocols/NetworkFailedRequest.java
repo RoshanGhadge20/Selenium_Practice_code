@@ -8,15 +8,15 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v122.fetch.Fetch;
 import org.openqa.selenium.devtools.v122.network.model.ErrorReason;
 
-public class NetworkFailedRequest {
+public class NetworkFailedRequest 
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) 
+	{
+	
 		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 
 		ChromeDriver driver = new ChromeDriver();
-		// log file ->
 
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();

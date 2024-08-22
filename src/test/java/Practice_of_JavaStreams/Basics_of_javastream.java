@@ -3,11 +3,12 @@ import java.util.ArrayList;
 
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
-public class Basics_of_javastream {
+public class Basics_of_javastream
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	public static void main(String[] args)
+	{
+	
 		ArrayList<String> names=new ArrayList<String>();
 		names.add("Roshan");
 		names.add("shubham");
@@ -38,6 +39,4 @@ public class Basics_of_javastream {
 		System.out.println(ageArrayList.stream().distinct().sorted());
 		
 		}
-	
-
 }

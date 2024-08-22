@@ -6,10 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v122.emulation.Emulation;
 
-public class MobileEmulatorTest {
+public class MobileEmulatorTest 
+{
 
-	public static void main(String[] args) throws InterruptedException  {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws InterruptedException  
+	{
 
 		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
 		
@@ -30,15 +31,7 @@ public class MobileEmulatorTest {
 		driver.findElement(By.linkText("Library")).click();
 		driver.close();
 		//Network.getRequestPostData
-		
-	
-		
-		
 
-		
-	
-		
-		
 	}
 
 }

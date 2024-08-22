@@ -17,10 +17,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.asm.Advice.Argument;
 
-public class operations_perfomed_with_js {
+public class operations_perfomed_with_js 
+{
 	private static Object[] argument;
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("headless");
@@ -28,9 +30,6 @@ public class operations_perfomed_with_js {
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
 		long startTime=System.currentTimeMillis();
-		
-		//Working with Javascript Executor 
-		
 		
 		//Sending an values into the any field 
 		JavascriptExecutor js=(JavascriptExecutor) driver;
@@ -65,15 +64,14 @@ public class operations_perfomed_with_js {
 		 * flagElement=driver.findElement(By.xpath(""));
 		 * js.executeScript(argument[0].ScrollIntoview(),"flag");
 		 */
-		
 			
 		long endTime=System.currentTimeMillis();	
 		long toatalTime=endTime-startTime;
 		long min=TimeUnit.MILLISECONDS.toMinutes(toatalTime);
 		System.out.println("Total Time required for Test execution in mins:- "+ min);
+		
 		driver.quit();
 		System.out.println("End of program execution");
-		
 	}
 
 }
