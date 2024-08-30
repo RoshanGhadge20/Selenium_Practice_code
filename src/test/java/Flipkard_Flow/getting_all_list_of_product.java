@@ -10,7 +10,6 @@ public class getting_all_list_of_product
 {
 	public static void main(String[] args) 
 	{
-
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/viewcart?exploreMode=true&preference=FLIPKART");
@@ -21,11 +20,7 @@ public class getting_all_list_of_product
 		{
 			System.out.println(product.getText());
 		}
-
 		driver.quit();
-		
 		System.out.println("End of progrm execution");
-		
 	}
-
 }

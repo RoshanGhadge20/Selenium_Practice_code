@@ -12,7 +12,6 @@ public class product_checkout
 {
 	public static void main(String[] args) throws InterruptedException 
 	{
-
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -27,7 +26,8 @@ public class product_checkout
 		// Working with multiple windows
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> iterator = windows.iterator();
-		while (iterator.hasNext()) {
+		while (iterator.hasNext()) 
+		{
 			String win = iterator.next();
 			System.out.println("Windows ids:- " + win);
 		}
@@ -37,11 +37,9 @@ public class product_checkout
 
 		// On cart page
 		driver.findElement(By.xpath("//span[contains(text(),'Place Order')]")).click();
-
+		
 		driver.quit();
-		
 		System.out.println("End of program execution");
-		
 	}
 
 }
