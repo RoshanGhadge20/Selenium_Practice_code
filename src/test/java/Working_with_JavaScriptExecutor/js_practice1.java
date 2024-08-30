@@ -9,8 +9,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class js_practice1 {
-	public static void main(String[] args) {
+public class js_practice1 
+{
+	public static void main(String[] args) 
+	{
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("Headless");
@@ -19,7 +21,8 @@ public class js_practice1 {
 
 		long startTime = System.currentTimeMillis();
 
-		try {
+		try 
+		{
 			driver.get("https://testautomationpractice.blogspot.com/");
 
 			// Working with Javascript Executor
@@ -54,11 +57,13 @@ public class js_practice1 {
 			long min=TimeUnit.MILLISECONDS.toMinutes(totalTime);
 			System.out.println("Total Time required for Test execution in min:- " + min);
 		} 
-		catch (Exception e) {
+		catch (Exception e)
+		{
 			e.printStackTrace();
 		} 
 		
-		finally {
+		finally
+		{
 			driver.quit();
 			System.out.println("End of program execution");
 		}

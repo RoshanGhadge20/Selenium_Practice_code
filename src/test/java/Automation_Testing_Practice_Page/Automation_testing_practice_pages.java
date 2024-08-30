@@ -110,8 +110,6 @@ public class Automation_testing_practice_pages
 	@FindBy(css = "input[name='Submit']")
 	WebElement submitElement;
 	
-
-	
 	Automation_testing_practice_pages(WebDriver driver)
 	{
 		this.driver=driver;
@@ -260,5 +258,4 @@ public class Automation_testing_practice_pages
 		submitElement.click();
 		
 	}
-
 }
