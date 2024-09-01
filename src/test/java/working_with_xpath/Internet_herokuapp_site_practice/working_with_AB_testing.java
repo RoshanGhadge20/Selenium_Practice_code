@@ -11,10 +11,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class working_with_AB_testing {
+public class working_with_AB_testing 
+{
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws InterruptedException
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -31,12 +32,11 @@ public class working_with_AB_testing {
 		System.out.println(textElement);
 		driver.navigate().back();
 		
-
-
 		// Working with Add/Remove Elements
 		System.out.println("2");
 		driver.findElement(By.linkText("Add/Remove Elements")).click();
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= 10; i++) 
+		{
 			driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
 		}
 		driver.navigate().back();
@@ -51,10 +51,13 @@ public class working_with_AB_testing {
 		// Working with Broken images
 		driver.findElement(By.linkText("Broken Images")).click();
 		List<WebElement> images = driver.findElements(By.tagName("img"));
-		for (WebElement image : images) {
-			if (image.getAttribute("naturalWidth").equals("0")) {
+		for (WebElement image : images) 
+		{
+			if (image.getAttribute("naturalWidth").equals("0"))
+			{
 				System.out.println(image.getAttribute("outerHTML") + " is broken.");
-			} else {
+			} else 
+			{
 				System.out.println(image.getAttribute("outerHTML") + "is correct");
 			}
 
@@ -147,9 +150,6 @@ public class working_with_AB_testing {
 		
 		//Working with Frames
 		driver.findElement(By.linkText("Frames")).click();
-		
-
-		
 		
 		driver.close();
 		System.out.println("End of Program Executions");

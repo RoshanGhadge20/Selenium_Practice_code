@@ -13,7 +13,7 @@ public class working_with_css
 		WebDriver driver = new ChromeDriver();
 
 		/*
-		 * Working with css selectors - Cusomized CSS Locators 
+		 * Working with css selectors - Customized CSS Locators 
 		 * 1. Tag and id
 		 * driver.findElement(By.cssSelector("*#name")).click();
 		 * 
@@ -25,12 +25,9 @@ public class working_with_css
 		 * 
 		 * 4 Tag and Class attribute
 		 * 	driver.findElement(By.cssSelector("tagname.classname[attribute='value']"));
-		 * 
-		 * 
 		 */
 
 		driver.quit();
 		System.out.println("End of program code");
 	}
-
 }

@@ -2,9 +2,7 @@ package Working_with_JavaScriptExecutor;
 
 import java.awt.Window;
 import java.util.concurrent.TimeUnit;
-
 import javax.swing.text.Document;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.JavascriptExecutor.*;
@@ -13,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.asm.Advice.Argument;
 
@@ -73,5 +70,4 @@ public class operations_perfomed_with_js
 		driver.quit();
 		System.out.println("End of program execution");
 	}
-
 }
