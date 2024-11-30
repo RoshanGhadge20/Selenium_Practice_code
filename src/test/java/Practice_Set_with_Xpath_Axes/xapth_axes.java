@@ -35,15 +35,48 @@ public class xapth_axes
 		driver.findElement(By.xpath("//div[@class='userform']/parent::div"));
 		
 	
-		/* 3 Child Node 
-		Syntaxt = //xpath_of_current_node/child::tagname 
+		/* 3 Ancestor Node 
+		Syntaxt = 1. //xpath_of_current_node/ancestor::tagname
+				  2. //xpath_current_node/ancestor::*
+		*/
+		driver.findElement(By.xpath("//div[@class='userform']/ancestor::*"));
+		
+		
+		
+		/* 4 Child Node 
+		Syntaxt = //xpath_of_current_node/child::tagname or //xpath_of_current_node/child::* 
 		*/
 		driver.findElement(By.xpath("//div[@class='userform']/child::input[2]"));
 		
 		
+		/* 5 Descendent Node 
+		Syntaxt = //xpath_of_current_node/descendent::tagname or //xpath_of_current_node/descendent::* 
+		*/
+		driver.findElement(By.xpath("//div[@class='elementor-element-populated']/descendant::div"));
 		
 		
+		/* 6 following Node 
+		Syntaxt = //xpath_of_current_node/following::tagname or //xpath_of_current_node/following::* 
+		 */
+		driver.findElement(By.xpath("//div[@class='userform']/following::*"));
+
 		
+		/* 6 preceding Node 
+		Syntaxt = //xpath_of_current_node/preceding::tagname or //xpath_of_current_node/preceding::* 
+		 */
+		driver.findElement(By.xpath("//div[@class='userform']/preceding::*"));
+		
+		
+		/* 7 following-sibling Node 
+		Syntaxt = //xpath_of_current_node/following-sibling::tagname or //xpath_of_current_node/following-sibling::* 
+		 */
+		driver.findElement(By.xpath("//div[@class='userform']/following-sibling::*"));
+
+		
+		/* 8 preceding-sibling Node 
+		Syntaxt = //xpath_of_current_node/preceding-sibling::tagname or //xpath_of_current_node/preceding-sibling::* 
+		 */
+		driver.findElement(By.xpath("//div[@class='elementor-element-populated']/preceding-sibling:div"));
 		
 		driver.quit();
 		
