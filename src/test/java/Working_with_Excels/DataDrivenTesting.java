@@ -13,8 +13,7 @@ public class DataDrivenTesting {
 	public static void main(String[] args) throws IOException {
 
 		// Basic setup for working with excels
-		FileInputStream fin = new FileInputStream(
-				"C://Users//Admin//Desktop//Book1.xlsx");
+		FileInputStream fin = new FileInputStream("C://Users//Admin//Desktop//Book1.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		System.out.println("Sheet Name is :- " + sheet.getSheetName());
@@ -45,18 +44,15 @@ public class DataDrivenTesting {
 		 * System.out.print(" "+value); } System.out.println(" "); }
 		 */
 
-		
-		//Printing all the records from excel sheet using the data formatter 
-		DataFormatter formatter=new DataFormatter();
-		Object data[][]=new Object[last_row_number][col_count];
-		for (int i=0;i<last_row_number;i++)
-		{
-			XSSFRow current_row=sheet.getRow(i);
-			for (int j=0;j<col_count;j++)
-			{
-				XSSFCell cell1=current_row.getCell(j);
-				data[i][j]=formatter.formatCellValue(cell1);
-				System.out.print(" "+data[i][j]);
+		// Printing all the records from excel sheet using the data formatter
+		DataFormatter formatter = new DataFormatter();
+		Object data[][] = new Object[last_row_number][col_count];
+		for (int i = 0; i < last_row_number; i++) {
+			XSSFRow current_row = sheet.getRow(i);
+			for (int j = 0; j < col_count; j++) {
+				XSSFCell cell1 = current_row.getCell(j);
+				data[i][j] = formatter.formatCellValue(cell1);
+				System.out.print(" " + data[i][j]);
 			}
 			System.out.println(" ");
 		}
