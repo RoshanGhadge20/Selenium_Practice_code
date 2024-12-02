@@ -16,34 +16,31 @@ public class check_dropdown_options_sorted {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().window().maximize();
-		
-		//Check that dropdown options are sorted 
-		WebElement element=driver.findElement(By.id("country"));
-		Select se=new Select(element);
-		List<String> originalList=new ArrayList<>();
-		List<String> tempList=new ArrayList<>();
-		
-		List<WebElement> options=se.getOptions();
+
+		// Check that dropdown options are sorted
+		WebElement element = driver.findElement(By.id("country"));
+		Select se = new Select(element);
+		List<String> originalList = new ArrayList<>();
+		List<String> tempList = new ArrayList<>();
+
+		List<WebElement> options = se.getOptions();
 		System.out.println("Drop-down menu options are :- ");
-		for(WebElement e:options)
-		{
+		for (WebElement e : options) {
 			originalList.add(e.getText());
 			tempList.add(e.getText());
 			System.out.println(e.getText());
 		}
-		
+
 		Collections.sort(tempList);
-		if(originalList==tempList)
-		{
+		if (originalList == tempList) {
 			System.out.println("Options are sorted in order");
-		}
-		else {
+		} else {
 			System.out.println("Options are not sorted in order");
 		}
-		
+
 		driver.close();
 		System.out.println("End of program execution");
 	}

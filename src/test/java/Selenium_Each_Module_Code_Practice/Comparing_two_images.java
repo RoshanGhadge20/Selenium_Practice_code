@@ -14,10 +14,8 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class Comparing_two_images 
-{
-	public static void main(String[] args) throws IOException 
-	{
+public class Comparing_two_images {
+	public static void main(String[] args) throws IOException {
 		// Setup WebDriver
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();

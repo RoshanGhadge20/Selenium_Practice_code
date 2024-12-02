@@ -76,13 +76,14 @@ public class Web_Elements_Utility {
 	}
 
 	public void click_buy_now() {
-		 try {
-		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		        WebElement buyNowButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#buy-now-button")));
-		        buyNowButton.click();
-		        System.out.println("Clicked on the buy now button.");
-		    } catch (NoSuchElementException e) {
-		        System.out.println("Buy now button not found.");
-		    }
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			WebElement buyNowButton = wait
+					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#buy-now-button")));
+			buyNowButton.click();
+			System.out.println("Clicked on the buy now button.");
+		} catch (NoSuchElementException e) {
+			System.out.println("Buy now button not found.");
+		}
 	}
 }

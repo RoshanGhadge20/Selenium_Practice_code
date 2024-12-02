@@ -29,7 +29,8 @@ public class amazon_product_buy {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
+		driver.get(
+				"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
 		logg.info("Webdriver initiated");
 	}
 
@@ -85,20 +86,20 @@ public class amazon_product_buy {
 	@Test(priority = 8)
 	public void check_detail_screen() throws InterruptedException {
 		objElements_Utility.get_details();
-		Set<String> win_han= driver.getWindowHandles();
-		Iterator<String> it=win_han.iterator();
-		while(it.hasNext())
-		{
-			System.out.println("Window Id:- "+ (it.next()).toString());
+		Set<String> win_han = driver.getWindowHandles();
+		Iterator<String> it = win_han.iterator();
+		while (it.hasNext()) {
+			System.out.println("Window Id:- " + (it.next()).toString());
 		}
 	}
 
-	String chil_winString="F8ECA481E5F89378D66AF70D9EA7251F";
+	String chil_winString = "F8ECA481E5F89378D66AF70D9EA7251F";
+
 	@Test(priority = 9)
 	public void buy_now() throws InterruptedException {
 		driver.switchTo().window(chil_winString);
 		objElements_Utility.click_buy_now();
-	
+
 	}
 
 	@AfterClass
