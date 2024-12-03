@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -19,10 +20,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class UploadDownload_Rahul_Shetty_Code_Practice 
-{
-	public static void main(String[] args) throws IOException 
-	{
+public class UploadDownload_Rahul_Shetty_Code_Practice {
+	public static void main(String[] args) throws IOException {
 
 		String fruitName = "Apple";
 		String updatedValue = "603";
@@ -65,8 +64,7 @@ public class UploadDownload_Rahul_Shetty_Code_Practice
 		System.out.println("End of program execution");
 	}
 
-	private static boolean updateCell(String fileName, int row, int col, String updatedValue) throws IOException
-	{
+	private static boolean updateCell(String fileName, int row, int col, String updatedValue) throws IOException {
 
 		ArrayList<String> a = new ArrayList<String>();
 		FileInputStream fis = new FileInputStream(fileName);
@@ -80,11 +78,10 @@ public class UploadDownload_Rahul_Shetty_Code_Practice
 		workbook.close();
 		fis.close();
 		return true;
-		
+
 	}
 
-	private static int getRowNumber(String fileName, String text) throws IOException 
-	{
+	private static int getRowNumber(String fileName, String text) throws IOException {
 
 		ArrayList<String> a = new ArrayList<String>();
 		FileInputStream fis = new FileInputStream(fileName);
@@ -101,36 +98,35 @@ public class UploadDownload_Rahul_Shetty_Code_Practice
 				Cell cell = cells.next();
 				if (cell.getCellType() == CellType.STRING && cell.getStringCellValue().equalsIgnoreCase(text)) {
 					rowIndex = k;
-					System.out.println("row_index:"+rowIndex);
+					System.out.println("row_index:" + rowIndex);
 				}
 			}
-			
+
 			k++;
 		}
 		return rowIndex;
 	}
 
-	private static int getColumnNumber(String fileName, String colName) throws IOException 
-	{
-		
-        ArrayList<String> a = new ArrayList<String>();
-        FileInputStream fis = new FileInputStream(fileName);
-        XSSFWorkbook workbook = new XSSFWorkbook(fis);
-        XSSFSheet sheet = workbook.getSheet("Sheet1");
+	private static int getColumnNumber(String fileName, String colName) throws IOException {
 
-        Iterator<Row> rows = sheet.iterator();
-        Row firstRow = rows.next();
-        Iterator<Cell> cells = firstRow.cellIterator();
-        int k = 1;
-        int column = 0;
-        while (cells.hasNext()) {
-            Cell value = cells.next();
-            if (value.getStringCellValue().equalsIgnoreCase(colName)) {
-                column = k;
-            }
-            k++;
-        }
-        System.out.println(column);
-        return column;
-}
+		ArrayList<String> a = new ArrayList<String>();
+		FileInputStream fis = new FileInputStream(fileName);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+		Iterator<Row> rows = sheet.iterator();
+		Row firstRow = rows.next();
+		Iterator<Cell> cells = firstRow.cellIterator();
+		int k = 1;
+		int column = 0;
+		while (cells.hasNext()) {
+			Cell value = cells.next();
+			if (value.getStringCellValue().equalsIgnoreCase(colName)) {
+				column = k;
+			}
+			k++;
+		}
+		System.out.println(column);
+		return column;
+	}
 }

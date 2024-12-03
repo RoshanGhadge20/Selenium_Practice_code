@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -21,11 +22,8 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-public class Upload_and_download 
-{
-	public static void main(String args[]) throws InterruptedException, IOException
-	{
+public class Upload_and_download {
+	public static void main(String args[]) throws InterruptedException, IOException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -40,8 +38,7 @@ public class Upload_and_download
 		int col = col_num();
 		String update_value = "2011";
 		update_cell_Data(row, col, update_value);
-		
-		
+
 		// ------**************Clicking on Upload button------**************
 		Thread.sleep(3000);
 		WebElement upload_btn = driver.findElement(By.cssSelector("#fileinput"));
@@ -89,40 +86,38 @@ public class Upload_and_download
 	}
 
 	public static void update_cell_Data(int row, int col, String updatedValue)
-	        throws FileNotFoundException, IOException, InterruptedException 
-	{
-	    FileInputStream fis = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
-	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
-	    XSSFSheet sheet = workbook.getSheet("Sheet1");
-	    Row rowField = sheet.getRow(row - 1);
-	    Cell cellField = rowField.getCell(col - 1);
-	    cellField.setCellValue(updatedValue);
-	    FileOutputStream fos = null;
-	    boolean fileOpened = false;
-	    int retries = 0;
-	    while (!fileOpened && retries < 5) { // Retry up to 5 times
-	        try {
-	            fos = new FileOutputStream("C://Users//Admin//Downloads//download.xlsx");
-	            workbook.write(fos);
-	            fileOpened = true;
-	        } catch (IOException e) {
-	            // File is locked, wait for a moment and retry
-	            retries++;
-	            Thread.sleep(2000); // Wait for 2 seconds
-	        }
-	    }
-	    if (!fileOpened) {
-	        throw new IOException("Unable to open file after multiple retries. File may be locked by another process.");
-	    }
-	    if (fos != null) {
-	        fos.close();
-	    }
-	    workbook.close();
-	    fis.close();
+			throws FileNotFoundException, IOException, InterruptedException {
+		FileInputStream fis = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		Row rowField = sheet.getRow(row - 1);
+		Cell cellField = rowField.getCell(col - 1);
+		cellField.setCellValue(updatedValue);
+		FileOutputStream fos = null;
+		boolean fileOpened = false;
+		int retries = 0;
+		while (!fileOpened && retries < 5) { // Retry up to 5 times
+			try {
+				fos = new FileOutputStream("C://Users//Admin//Downloads//download.xlsx");
+				workbook.write(fos);
+				fileOpened = true;
+			} catch (IOException e) {
+				// File is locked, wait for a moment and retry
+				retries++;
+				Thread.sleep(2000); // Wait for 2 seconds
+			}
+		}
+		if (!fileOpened) {
+			throw new IOException("Unable to open file after multiple retries. File may be locked by another process.");
+		}
+		if (fos != null) {
+			fos.close();
+		}
+		workbook.close();
+		fis.close();
 	}
 
-	public static int col_num() throws FileNotFoundException, IOException
-	{
+	public static int col_num() throws FileNotFoundException, IOException {
 		FileInputStream fin = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
 		int column = 0;
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
@@ -153,8 +148,7 @@ public class Upload_and_download
 
 	}
 
-	public static int row_number() throws FileNotFoundException, IOException
-	{
+	public static int row_number() throws FileNotFoundException, IOException {
 		FileInputStream fin = new FileInputStream("C://Users//Admin//Downloads//download.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fin);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
