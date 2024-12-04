@@ -11,11 +11,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class working_with_AB_testing 
-{
+public class working_with_AB_testing {
 
-	public static void main(String[] args) throws InterruptedException
-	{
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -31,12 +29,11 @@ public class working_with_AB_testing
 				.getText();
 		System.out.println(textElement);
 		driver.navigate().back();
-		
+
 		// Working with Add/Remove Elements
 		System.out.println("2");
 		driver.findElement(By.linkText("Add/Remove Elements")).click();
-		for (int i = 1; i <= 10; i++) 
-		{
+		for (int i = 1; i <= 10; i++) {
 			driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
 		}
 		driver.navigate().back();
@@ -51,13 +48,10 @@ public class working_with_AB_testing
 		// Working with Broken images
 		driver.findElement(By.linkText("Broken Images")).click();
 		List<WebElement> images = driver.findElements(By.tagName("img"));
-		for (WebElement image : images) 
-		{
-			if (image.getAttribute("naturalWidth").equals("0"))
-			{
+		for (WebElement image : images) {
+			if (image.getAttribute("naturalWidth").equals("0")) {
 				System.out.println(image.getAttribute("outerHTML") + " is broken.");
-			} else 
-			{
+			} else {
 				System.out.println(image.getAttribute("outerHTML") + "is correct");
 			}
 
@@ -136,21 +130,21 @@ public class working_with_AB_testing
 		 * driver.findElement(By.cssSelector("*[id='file-upload']")).click();
 		 * 
 		 */
-		
-		//Working with Floating Menu
-		
+
+		// Working with Floating Menu
+
 		// Working with Forgot Password
 		driver.findElement(By.linkText("Forgot Password")).click();
 		driver.findElement(By.cssSelector("*[name='email']")).sendKeys("roshanghadge202222@gmail.com");
 		driver.findElement(By.cssSelector("*[type='submit']")).click();
 		driver.navigate().back();
 		driver.navigate().back();
-		
-		//Working with Form Authentication
-		
-		//Working with Frames
+
+		// Working with Form Authentication
+
+		// Working with Frames
 		driver.findElement(By.linkText("Frames")).click();
-		
+
 		driver.close();
 		System.out.println("End of Program Executions");
 	}

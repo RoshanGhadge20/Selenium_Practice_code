@@ -2,19 +2,15 @@ package working_with_xpath.Internet_herokuapp_site_practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.passay.dictionary.sort.BubbleSort;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class working_with_Frames
-{
-	public static void main(String[] args) 
-	{
+public class working_with_Frames {
+	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -115,16 +111,16 @@ public class working_with_Frames
 
 		// Working with Secure File Shifting Content
 		System.out.println("Working with shifting of content/image by pixels");
-		
-		//Working with Slow Resources 
-		
-		//Working with data tables 
-		
-		//Working with status codes
-		
-		//work with typos
-		
-		//WYSIWYG Editor
+
+		// Working with Slow Resources
+
+		// Working with data tables
+
+		// Working with status codes
+
+		// work with typos
+
+		// WYSIWYG Editor
 
 		driver.quit();
 		System.out.println("End of program code execution");
