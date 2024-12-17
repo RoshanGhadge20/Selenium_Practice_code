@@ -8,6 +8,7 @@ import java.util.concurrent.TimeoutException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,24 +24,43 @@ public class Web_Elements_Utility {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
+	@CacheLookup
 	@FindBy(css = "input#ap_email")
 	WebElement login_FieldElement;
+	
+	@CacheLookup
 	@FindBy(css = "input.a-button-input")
 	WebElement login_btnElement;
+	
+	@CacheLookup
 	@FindBy(css = "input[name='password']")
 	WebElement pass_FieldElement;
+	
+	@CacheLookup
 	@FindBy(css = "input[type='submit']")
 	WebElement sign_btnElement;
+	
+	@CacheLookup
 	@FindBy(css = "input#twotabsearchtextbox")
 	WebElement search_fieldElement;
+	
+	@CacheLookup
 	@FindBy(css = "input#nav-search-submit-button")
 	WebElement search_iconElement;
+	
+	@CacheLookup
 	@FindBy(css = "div[data-cy='title-recipe']")
 	WebElement list_ofproductsElement;
+	
+	@CacheLookup
 	@FindBy(css = "div.s-suggestion-container")
 	WebElement suggestion_Element;
+	
+	@CacheLookup
 	@FindBy(xpath = "//span[normalize-space()='10 Pro 5G (Dark Matter, 128 GB) (8 GB RAM)']")
 	WebElement product;
+	
+	@CacheLookup
 	@FindBy(css = "#buy-now-button")
 	WebElement buy_now_buttonElement;
 
@@ -81,7 +101,7 @@ public class Web_Elements_Utility {
 			WebElement buyNowButton = wait
 					.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#buy-now-button")));
 			buyNowButton.click();
-			System.out.println("Clicked on the buy now button.");
+			System.out.println("Clicked on the buy now button");
 		} catch (NoSuchElementException e) {
 			System.out.println("Buy now button not found.");
 		}

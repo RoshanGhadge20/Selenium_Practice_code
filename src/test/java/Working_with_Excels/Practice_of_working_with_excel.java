@@ -27,24 +27,26 @@ public class Practice_of_working_with_excel {
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		int row_count = sheet.getPhysicalNumberOfRows();
 		System.out.println("Number of rows into this sheet are :- " + row_count);
-		
-		  XSSFRow row = sheet.getRow(0); XSSFCell cell = row.getCell(0);
-		
-		  int col_count = sheet.getRow(0).getPhysicalNumberOfCells();
-		  System.out.println("Number of cells into the row are :- " + col_count);
-		  
-		  // Retrieving all the details from this excel sheet 
-		  Object data[][] = new
-		  Object[row_count][col_count]; for (int i = 0; i < row_count; i++) { XSSFRow
-		  curretRow = sheet.getRow(i); for (int j = 0; j < col_count; j++) { XSSFCell
-		  curentCell = curretRow.getCell(j); data[i][j] =
-		  formatter.formatCellValue(curentCell); System.out.println(""+data[i][j]); }
-		  System.out.println("");
-		  
-		  }
-		 
 
-		
+		XSSFRow row = sheet.getRow(0);
+		XSSFCell cell = row.getCell(0);
+
+		int col_count = sheet.getRow(0).getPhysicalNumberOfCells();
+		System.out.println("Number of cells into the row are :- " + col_count);
+
+		// Retrieving all the details from this excel sheet
+		Object data[][] = new Object[row_count][col_count];
+		for (int i = 0; i < row_count; i++) {
+			XSSFRow curretRow = sheet.getRow(i);
+			for (int j = 0; j < col_count; j++) {
+				XSSFCell curentCell = curretRow.getCell(j);
+				data[i][j] = formatter.formatCellValue(curentCell);
+				System.out.println("" + data[i][j]);
+			}
+			System.out.println("");
+
+		}
+
 		/*
 		 * // Retrieving the any cell value at specific location Iterator<Row>
 		 * rowsIterator = sheet.iterator();
@@ -67,7 +69,7 @@ public class Practice_of_working_with_excel {
 		 * }
 		 * 
 		 * }
-		 */		 
+		 */
 
 		// Closing workbook & file
 		workbook.close();

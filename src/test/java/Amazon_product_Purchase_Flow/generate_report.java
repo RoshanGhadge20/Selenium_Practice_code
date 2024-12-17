@@ -8,7 +8,6 @@ public class generate_report {
 	@Test
 	public void pass_Test() {
 		Assert.assertTrue(true);
-
 	}
 
 	@Test
