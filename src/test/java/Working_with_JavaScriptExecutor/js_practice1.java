@@ -32,7 +32,8 @@ public class js_practice1
 
 			// Performing click operation using Javascript Executor
 			js.executeScript("document.getElementById('field2').click();");
-
+				
+			js.executeScript("document.getElement", args)
 			// Javascript executor to interact with checkboxes
 			js.executeScript("document.getElementById('male').checked=false;");
 
